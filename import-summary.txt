@@ -1,0 +1,96 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .amateras
+* .idea\
+* .idea\WSTDD.iml
+* .idea\compiler.xml
+* .idea\copyright\
+* .idea\copyright\profiles_settings.xml
+* .idea\misc.xml
+* .idea\modules.xml
+* .idea\vcs.xml
+* .idea\workspace.xml
+* ant.properties
+* build.xml
+* debug.keystore
+* desktop.ini
+* hs_err_pid11676.log
+* ic_launcher-web.png
+* proguard\
+* proguard\dump.txt.svntmp
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
+* wstdd
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+gson-2.2.1.jar => com.google.code.gson:gson:2.2.1
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.2.1.jar => version 2.2.1 in com.google.code.gson:gson:2.2.1
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets\
+* libs\activation.jar => app\libs\activation.jar
+* libs\additionnal.jar => app\libs\additionnal.jar
+* libs\afinal_0.5_bin.jar => app\libs\afinal_0.5_bin.jar
+* libs\android-async-http-1.4.6.jar => app\libs\android-async-http-1.4.6.jar
+* libs\armeabi\libzbar.so => app\src\main\jniLibs\armeabi\libzbar.so
+* libs\httpmime-4.1.2.jar => app\libs\httpmime-4.1.2.jar
+* libs\libammsdk_old.jar => app\libs\libammsdk_old.jar
+* libs\log.jar => app\libs\log.jar
+* libs\mail.jar => app\libs\mail.jar
+* libs\mta-sdk-1.6.2.jar => app\libs\mta-sdk-1.6.2.jar
+* libs\open_sdk.jar => app\libs\open_sdk.jar
+* libs\universal-image-loader-1.9.2.jar => app\libs\universal-image-loader-1.9.2.jar
+* libs\zxing.jar => app\libs\zxing.jar
+* lint.xml => app\lint.xml
+* proguard-project.txt => app\proguard-project.txt
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
