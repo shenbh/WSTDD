@@ -4,19 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 发起讲座-发布  popwindow -->
 
-  <!--   <ImageView
-        android:id="@+id/originate_chair_popwindow_delete"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/originate_close" /> -->
+    <!--   <ImageView
+          android:id="@+id/originate_chair_popwindow_delete"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginRight="10dp"
+          android:layout_marginTop="10dp"
+          android:src="@drawable/originate_close" /> -->
 
     <ImageView
         android:id="@+id/imageView1"
@@ -39,8 +39,7 @@
         android:singleLine="true"
         android:text="融资中国2015互联网金融峰..."
         android:textColor="@color/textgray"
-        android:textSize="15sp"
-         />
+        android:textSize="15sp" />
 
     <TextView
         android:id="@+id/textView3"
@@ -60,7 +59,7 @@
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="21dp"
-        android:gravity="center" >
+        android:gravity="center">
 
         <View
             android:layout_width="50dip"
@@ -92,7 +91,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/linearLayout1"
         android:layout_marginTop="20dip"
-        android:paddingBottom="20dip" >
+        android:paddingBottom="20dip">
 
         <com.newland.wstdd.common.widget.PengTextView
             android:id="@+id/activity_find_chairdetail_pop_weixin"
@@ -102,7 +101,8 @@
             android:clickable="true"
             android:gravity="center"
             android:text="微信好友"
-            android:textColor="@color/textgray" android:drawablePadding="5dp"
+            android:textColor="@color/textgray"
+            android:drawablePadding="5dp"
             peng:peng_drawableTop="@drawable/find_chair_weixinshare" />
 
         <com.newland.wstdd.common.widget.PengTextView
@@ -112,7 +112,8 @@
             android:layout_weight="1"
             android:clickable="true"
             android:gravity="center"
-            android:text="微信朋友圈" android:drawablePadding="5dp"
+            android:text="微信朋友圈"
+            android:drawablePadding="5dp"
             android:textColor="@color/textgray"
             peng:peng_drawableTop="@drawable/find_chair_weixinshare_zone" />
 
@@ -121,7 +122,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:clickable="true" android:drawablePadding="5dp"
+            android:clickable="true"
+            android:drawablePadding="5dp"
             android:gravity="center"
             android:text="手机QQ"
             android:textColor="@color/textgray"
@@ -140,12 +142,13 @@
         android:textColor="@color/gray"
         android:textSize="14sp" />
 
-     <View
-         android:id="@+id/originate_chair_popwindow_delete_line"
+    <View
+        android:id="@+id/originate_chair_popwindow_delete_line"
         android:layout_width="match_parent"
         android:layout_height="0.1dip"
         android:layout_above="@+id/originate_chair_popwindow_delete"
         android:background="@color/line_gray" />
+
     <Button
         android:id="@+id/originate_chair_popwindow_delete"
         android:layout_width="match_parent"
@@ -154,6 +157,7 @@
         android:layout_below="@+id/linearLayout2"
         android:background="#F8F8F8"
         android:text="取消" />
+
     <ImageView
         android:id="@+id/originate_chair_popwindow_image_delete"
         android:layout_width="wrap_content"

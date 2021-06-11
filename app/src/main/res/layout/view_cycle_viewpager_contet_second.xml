@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <RelativeLayout
         android:id="@+id/rr"
         android:layout_width="match_parent"
-        android:layout_height="20dip" >
+        android:layout_height="20dip">
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView1"
@@ -63,20 +63,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/rr"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
-            android:visibility="gone" >
+            android:visibility="gone">
 
             <com.newland.wstdd.find.hotgridview.HotBaseViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone" >
-            </com.newland.wstdd.find.hotgridview.HotBaseViewPager>
+                android:visibility="gone"></com.newland.wstdd.find.hotgridview.HotBaseViewPager>
         </RelativeLayout>
     </FrameLayout>
 

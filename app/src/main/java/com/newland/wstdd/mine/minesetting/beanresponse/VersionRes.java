@@ -4,18 +4,18 @@ import com.newland.wstdd.mine.minesetting.beanrequest.TddAppVersion;
 
 /**
  * 版本更新
- * @author Administrator
  *
+ * @author Administrator
  */
 public class VersionRes {
-	private TddAppVersion tddAppVersion;//版本对象信息
+    private TddAppVersion tddAppVersion;//版本对象信息
 
-	public TddAppVersion getTddAppVersion() {
-		return tddAppVersion;
-	}
+    public TddAppVersion getTddAppVersion() {
+        return tddAppVersion;
+    }
 
-	public void setTddAppVersion(TddAppVersion tddAppVersion) {
-		this.tddAppVersion = tddAppVersion;
-	}
-	
+    public void setTddAppVersion(TddAppVersion tddAppVersion) {
+        this.tddAppVersion = tddAppVersion;
+    }
+
 }

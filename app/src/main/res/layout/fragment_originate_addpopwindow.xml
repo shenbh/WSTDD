@@ -5,7 +5,7 @@
     android:background="@color/white"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="5dip" >
+    android:padding="5dip">
 
     <!-- “添加”popwindow -->
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:paddingBottom="10dip" >
+    android:paddingBottom="10dip">
 
     <!-- 设置收货地址item -->
 
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:paddingTop="10dip" >
+        android:paddingTop="10dip">
 
         <TextView
             android:id="@+id/activity_mine_receiptaddress_name_tv"
@@ -74,7 +74,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="35dip"
-            android:layout_below="@+id/imageView1" >
+            android:layout_below="@+id/imageView1">
 
             <com.newland.wstdd.common.widget.PengTextView
                 android:id="@+id/activity_mine_receiptaddress_setdefaultaddress_tv"

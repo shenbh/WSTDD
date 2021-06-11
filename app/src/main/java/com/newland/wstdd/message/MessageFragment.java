@@ -11,62 +11,63 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 /**
  * 消息的界面
- * @author Administrator
  *
+ * @author Administrator
  */
 public class MessageFragment extends BaseFragment {
-	private View view;
+    private View view;
 
-	@Override   
-	public void onCreate(Bundle savedInstanceState)    {    
-		// TODO Auto-generated method stub    
-		super.onCreate(savedInstanceState);   
-		System.out.println("ExampleFragment--onCreate");   
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onCreate(savedInstanceState);
+        System.out.println("ExampleFragment--onCreate");
     }
-	
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
-		super.onActivityCreated(savedInstanceState);
-		
-	}
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		 if (view != null) {
-		        ViewGroup parent = (ViewGroup) view.getParent();
-		        if (parent != null)
-		            parent.removeView(view);
-		    }else{
-		    	try {
-					view = inflater.inflate(R.layout.fragment_message, container, false);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-		    }
-	
-		
-		return view;
-	}
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onActivityCreated(savedInstanceState);
 
-	@Override
-	public void setUserVisibleHint(boolean isVisibleToUser) {
-		// TODO Auto-generated method stub
-		super.setUserVisibleHint(isVisibleToUser);
-		
-	}
+    }
 
-	@Override
-	public void onClick(View v) {
-	}
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        if (view != null) {
+            ViewGroup parent = (ViewGroup) view.getParent();
+            if (parent != null)
+                parent.removeView(view);
+        } else {
+            try {
+                view = inflater.inflate(R.layout.fragment_message, container, false);
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+        }
 
-	@Override
-	protected View createAndInitView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		return null;
-	}
-	
-	
+
+        return view;
+    }
+
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        // TODO Auto-generated method stub
+        super.setUserVisibleHint(isVisibleToUser);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+    }
+
+    @Override
+    protected View createAndInitView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        return null;
+    }
+
+
 }

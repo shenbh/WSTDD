@@ -3,14 +3,14 @@
     xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="50dip"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 通过名单 团秘 -->
 
     <RelativeLayout
         android:id="@+id/signlist_item_rl"
         style="@style/layout_mW_50H_style"
-        android:background="@color/white" >
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/tuanda_iv"

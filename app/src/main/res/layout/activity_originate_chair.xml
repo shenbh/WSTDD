@@ -5,7 +5,7 @@
     android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 发起-讲座 -->
 
@@ -13,27 +13,26 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/activity_originate_ll"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:orientation="vertical"
-                 >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:id="@+id/originate_chair_theme_ll"
                     style="@style/layout_image_originatechair_style"
                     android:paddingLeft="20dip"
-                    android:paddingRight="20dip" >
+                    android:paddingRight="20dip">
 
                     <ImageView
                         style="@style/layout_image_style"
@@ -42,7 +41,7 @@
                         android:layout_weight="0.1"
                         android:src="@drawable/originate_chair_theme_icon" />
 
-                    <EditText 
+                    <EditText
                         android:id="@+id/originate_originateactivity_title_edt"
                         style="@style/head_title_second_style"
                         android:layout_weight="0.8"
@@ -68,7 +67,7 @@
                 <LinearLayout
                     android:id="@+id/originate_chair_starttime_ll"
                     style="@style/layout_image_originatechair_style"
-                    android:orientation="horizontal" 
+                    android:orientation="horizontal"
                     android:paddingLeft="20dip"
                     android:paddingRight="15dip">
 
@@ -78,45 +77,45 @@
                         android:layout_height="30dip"
                         android:layout_weight="0.1"
                         android:src="@drawable/originate_chair_starttime_icon" />
-		
-                    <LinearLayout
-                           android:id="@+id/originate_chair_starttime_ll1" 
-                           style="@style/layout_image_originatechair_style"
-                           android:orientation="horizontal"
-                           android:layout_weight="0.5">
-                        <TextView
-                        android:id="@+id/originate_chair_starttime_tv"
-                        style="@style/head_title_second_style"
-                        android:background="@color/white"
-                        android:paddingLeft="15dip"
-                        android:paddingRight="0dip"
-                        android:layout_weight="0.1"
-                        android:textColor="@color/textgray"               
-                        android:textColorHint="@color/hint_textview"
-                        android:textSize="14sp" />
-                        <TextView
-                        android:id="@+id/originate_chair_starttime_tv1"
-                        style="@style/head_title_second_style"
-                        android:background="@color/white"
-                        android:hint="开始时间"
-                        android:layout_weight="0.3"
-                        android:textColor="@color/textgray"               
-                        android:textColorHint="@color/hint_textview"
-                        android:textSize="14sp" />
-                        
-                        
-                    </LinearLayout>
-                   
 
-                    
-                    
+                    <LinearLayout
+                        android:id="@+id/originate_chair_starttime_ll1"
+                        style="@style/layout_image_originatechair_style"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.5">
+
+                        <TextView
+                            android:id="@+id/originate_chair_starttime_tv"
+                            style="@style/head_title_second_style"
+                            android:background="@color/white"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="0dip"
+                            android:layout_weight="0.1"
+                            android:textColor="@color/textgray"
+                            android:textColorHint="@color/hint_textview"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/originate_chair_starttime_tv1"
+                            style="@style/head_title_second_style"
+                            android:background="@color/white"
+                            android:hint="开始时间"
+                            android:layout_weight="0.3"
+                            android:textColor="@color/textgray"
+                            android:textColorHint="@color/hint_textview"
+                            android:textSize="14sp" />
+
+
+                    </LinearLayout>
+
+
                     <ImageView
                         style="@style/layout_image_style"
                         android:layout_width="30dip"
                         android:layout_height="25dip"
                         android:layout_weight="0.1"
-                      
-                        
+
+
                         android:src="@drawable/originate_chair_right_expand_icon" />
                 </LinearLayout>
 
@@ -124,9 +123,9 @@
 
                 <LinearLayout
                     android:id="@+id/originate_chair_location_ll"
-                    style="@style/layout_image_originatechair_style" 
+                    style="@style/layout_image_originatechair_style"
                     android:paddingLeft="20dip"
-                android:paddingRight="20dip">
+                    android:paddingRight="20dip">
 
                     <ImageView
                         style="@style/layout_image_style"
@@ -135,7 +134,7 @@
                         android:layout_weight="0.1"
                         android:src="@drawable/originate_chair_address_icon" />
 
-                    <EditText  
+                    <EditText
                         android:id="@+id/originate_originateactivity_address_edt"
                         style="@style/head_title_second_style"
                         android:layout_weight="0.8"
@@ -144,7 +143,7 @@
                         android:paddingLeft="15dip"
                         android:paddingRight="0dip"
                         android:textColor="@color/textgray"
-                        android:textColorHint="@color/hint_textview"                  
+                        android:textColorHint="@color/hint_textview"
                         android:textSize="14sp" />
 
                     <ImageView
@@ -162,7 +161,7 @@
                     android:id="@+id/originate_chair_endtime_ll"
                     style="@style/layout_image_originatechair_style"
                     android:paddingLeft="20dip"
-                android:paddingRight="15dip" >
+                    android:paddingRight="15dip">
 
                     <ImageView
                         style="@style/layout_image_style"
@@ -170,38 +169,42 @@
                         android:layout_height="30dip"
                         android:layout_weight="0.1"
                         android:src="@drawable/originate_chair_endtime_icon" />
-    				<LinearLayout 
-    				       android:id="@+id/originate_chair_endtime_ll1"
-                           style="@style/layout_image_originatechair_style"
-                           android:orientation="horizontal"
-                           android:layout_weight="0.8">
-                    <TextView
-                        android:id="@+id/originate_chair_endtime_tv"
-                        style="@style/head_title_second_style"
-                        android:layout_weight="0.1"
-                        android:background="@color/white"
-                        android:paddingLeft="15dip"
-                        android:paddingRight="0dip"
-                        android:textColor="@color/textgray"
-                        android:textColorHint="@color/hint_textview"
-                        android:textSize="14sp" />
-                      <TextView
-                        android:id="@+id/originate_chair_endtime_tv1"
-                        style="@style/head_title_second_style"
-                        android:layout_weight="0.3"
-                        android:background="@color/white"
-                        android:hint="@string/originate_chair_endtime"
-                        android:textColor="@color/textgray"
-                        android:textColorHint="@color/hint_textview"
-                        android:textSize="14sp" />
-  					</LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/originate_chair_endtime_ll1"
+                        style="@style/layout_image_originatechair_style"
+                        android:orientation="horizontal"
+                        android:layout_weight="0.8">
+
+                        <TextView
+                            android:id="@+id/originate_chair_endtime_tv"
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.1"
+                            android:background="@color/white"
+                            android:paddingLeft="15dip"
+                            android:paddingRight="0dip"
+                            android:textColor="@color/textgray"
+                            android:textColorHint="@color/hint_textview"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/originate_chair_endtime_tv1"
+                            style="@style/head_title_second_style"
+                            android:layout_weight="0.3"
+                            android:background="@color/white"
+                            android:hint="@string/originate_chair_endtime"
+                            android:textColor="@color/textgray"
+                            android:textColorHint="@color/hint_textview"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
                     <ImageView
                         style="@style/layout_image_style"
-                         android:layout_width="30dip"
+                        android:layout_width="30dip"
                         android:layout_height="25dip"
                         android:layout_weight="0.1"
                         android:gravity="center"
-                        
+
                         android:src="@drawable/originate_chair_right_expand_icon" />
                 </LinearLayout>
 
@@ -211,7 +214,7 @@
                     android:id="@+id/originate_chair_numnolimit_ll"
                     style="@style/layout_image_originatechair_style"
                     android:paddingLeft="20dip"
-                android:paddingRight="20dip" >
+                    android:paddingRight="20dip">
 
                     <ImageView
                         style="@style/layout_image_style"
@@ -220,7 +223,7 @@
                         android:layout_weight="0.1"
                         android:src="@drawable/originate_chair_peoples_icon" />
 
-                    <EditText  
+                    <EditText
                         android:id="@+id/originate_originateactivity_limitperson_edt"
                         style="@style/head_title_second_style"
                         android:layout_weight="0.8"
@@ -240,7 +243,7 @@
                         android:layout_weight="0.1"
                         android:gravity="center"
                         android:src="@drawable/originate_chair_right_expand_icon"
-                        
+
                         android:visibility="invisible" />
                 </LinearLayout>
 
@@ -250,7 +253,7 @@
                     android:id="@+id/originate_chair_mustselect_ll"
                     style="@style/layout_image_originatechair_style"
                     android:paddingLeft="20dip"
-                android:paddingRight="15dip" >
+                    android:paddingRight="15dip">
 
                     <ImageView
                         style="@style/layout_image_style"
@@ -297,7 +300,7 @@
                 android:verticalSpacing="10dp"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip"
-                android:visibility="gone" >
+                android:visibility="gone">
 
                 <com.newland.wstdd.originate.origateactivity.OriginateCharirGridView
                     android:id="@+id/selected_must_gridv"
@@ -308,8 +311,7 @@
                     android:horizontalSpacing="31dp"
                     android:numColumns="3"
                     android:scrollbars="none"
-                    android:verticalSpacing="10dp" >
-                </com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
+                    android:verticalSpacing="10dp"></com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
             </ScrollView>
 
             <include layout="@layout/line_nopadding" />
@@ -323,10 +325,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/white"
-                android:paddingBottom="10dip"
-                 >
+                android:paddingBottom="10dip">
 
-                <EditText  
+                <EditText
                     android:id="@+id/originate_chair_describe_edt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -369,11 +370,11 @@
                     style="@style/layout_mw_style"
                     android:layout_below="@+id/imageView1"
                     android:background="@color/white"
-                    android:scrollbars="none" >
+                    android:scrollbars="none">
 
                     <LinearLayout
                         style="@style/layout_mw_style"
-                        android:orientation="vertical" >
+                        android:orientation="vertical">
 
                         <TextView
                             android:id="@+id/originate_chair_addphoto_icon"
@@ -400,8 +401,7 @@
                             android:numColumns="4"
                             android:scrollbars="none"
                             android:verticalSpacing="10dp"
-                            android:visibility="gone" >
-                        </com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
+                            android:visibility="gone"></com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
                     </LinearLayout>
                 </ScrollView>
             </RelativeLayout>

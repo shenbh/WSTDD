@@ -2,23 +2,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <Button 
+    <Button
         android:id="@+id/share_weibo1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="分享给好友"/>
-    <Button 
+        android:text="分享给好友" />
+
+    <Button
         android:id="@+id/share_weibo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="分享到朋友圈"/>
+        android:text="分享到朋友圈" />
 
-    
-    <Button 
+
+    <Button
         android:id="@+id/share_qq1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="分享到QQ好友"/>
+        android:text="分享到QQ好友" />
 </LinearLayout>

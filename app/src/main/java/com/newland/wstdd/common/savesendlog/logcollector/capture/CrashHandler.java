@@ -20,193 +20,191 @@ import android.os.Process;
 import android.util.Base64;
 
 /**
- * 
  * @author jiabin
- *
  */
 public class CrashHandler implements UncaughtExceptionHandler {
 
-	private static final String TAG = CrashHandler.class.getName();
+    private static final String TAG = CrashHandler.class.getName();
 
-	private static final String CHARSET = "UTF-8";
+    private static final String CHARSET = "UTF-8";
 
-	private static CrashHandler sInstance;
+    private static CrashHandler sInstance;
 
-	private Context mContext;
+    private Context mContext;
 
-	private Thread.UncaughtExceptionHandler mDefaultCrashHandler;
+    private Thread.UncaughtExceptionHandler mDefaultCrashHandler;
 
-	String appVerName;
+    String appVerName;
 
-	String appVerCode;
+    String appVerCode;
 
-	String OsVer;
+    String OsVer;
 
-	String vendor;
+    String vendor;
 
-	String model;
+    String model;
 
-	String mid;
+    String mid;
 
-	private CrashHandler(Context c) {
-		mContext = c.getApplicationContext();
-		// mContext = c;
-		appVerName = "appVerName:" + LogCollectorUtility.getVerName(mContext);
-		appVerCode = "appVerCode:" + LogCollectorUtility.getVerCode(mContext);
-		OsVer = "OsVer:" + Build.VERSION.RELEASE;
-		vendor = "vendor:" + Build.MANUFACTURER;
-		model = "model:" + Build.MODEL;
-		mid = "mid:" + LogCollectorUtility.getMid(mContext);
-	}
+    private CrashHandler(Context c) {
+        mContext = c.getApplicationContext();
+        // mContext = c;
+        appVerName = "appVerName:" + LogCollectorUtility.getVerName(mContext);
+        appVerCode = "appVerCode:" + LogCollectorUtility.getVerCode(mContext);
+        OsVer = "OsVer:" + Build.VERSION.RELEASE;
+        vendor = "vendor:" + Build.MANUFACTURER;
+        model = "model:" + Build.MODEL;
+        mid = "mid:" + LogCollectorUtility.getMid(mContext);
+    }
 
-	public static CrashHandler getInstance(Context c) {
-		if (c == null) {
-			LogHelper.e(TAG, "Context is null");
-			return null;
-		}
-		if (sInstance == null) {
-			sInstance = new CrashHandler(c);
-		}
-		return sInstance;
-	}
+    public static CrashHandler getInstance(Context c) {
+        if (c == null) {
+            LogHelper.e(TAG, "Context is null");
+            return null;
+        }
+        if (sInstance == null) {
+            sInstance = new CrashHandler(c);
+        }
+        return sInstance;
+    }
 
-	public void init() {
+    public void init() {
 
-		if (mContext == null) {
-			return;
-		}
+        if (mContext == null) {
+            return;
+        }
 
-		boolean b = LogCollectorUtility.hasPermission(mContext);
-		if (!b) {
-			return;
-		}
-		mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler();
-		Thread.setDefaultUncaughtExceptionHandler(this);
-	}
+        boolean b = LogCollectorUtility.hasPermission(mContext);
+        if (!b) {
+            return;
+        }
+        mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler();
+        Thread.setDefaultUncaughtExceptionHandler(this);
+    }
 
-	@Override
-	public void uncaughtException(Thread thread, Throwable ex) {
-		//
-		handleException(ex);
-		//
-		ex.printStackTrace();
+    @Override
+    public void uncaughtException(Thread thread, Throwable ex) {
+        //
+        handleException(ex);
+        //
+        ex.printStackTrace();
 
-		if (mDefaultCrashHandler != null) {
-			mDefaultCrashHandler.uncaughtException(thread, ex);
-		} else {
-			Process.killProcess(Process.myPid());
-			// System.exit(1);
-		}
-	}
+        if (mDefaultCrashHandler != null) {
+            mDefaultCrashHandler.uncaughtException(thread, ex);
+        } else {
+            Process.killProcess(Process.myPid());
+            // System.exit(1);
+        }
+    }
 
-	private void handleException(Throwable ex) {
-		String s = fomatCrashInfo(ex);
-		// String bes = fomatCrashInfoEncode(ex);
-		LogHelper.d(TAG, s);
-		// LogHelper.d(TAG, bes);
-		//LogFileStorage.getInstance(mContext).saveLogFile2Internal(bes);
-		LogFileStorage.getInstance(mContext).saveLogFile2Internal(s);
-		if(Constants.DEBUG){
-			LogFileStorage.getInstance(mContext).saveLogFile2SDcard(s, true);
-		}
-	}
+    private void handleException(Throwable ex) {
+        String s = fomatCrashInfo(ex);
+        // String bes = fomatCrashInfoEncode(ex);
+        LogHelper.d(TAG, s);
+        // LogHelper.d(TAG, bes);
+        //LogFileStorage.getInstance(mContext).saveLogFile2Internal(bes);
+        LogFileStorage.getInstance(mContext).saveLogFile2Internal(s);
+        if (Constants.DEBUG) {
+            LogFileStorage.getInstance(mContext).saveLogFile2SDcard(s, true);
+        }
+    }
 
-	private String fomatCrashInfo(Throwable ex) {
+    private String fomatCrashInfo(Throwable ex) {
 
-		/*
-		 * String lineSeparator = System.getProperty("line.separator");
-		 * if(TextUtils.isEmpty(lineSeparator)){ lineSeparator = "\n"; }
-		 */
+        /*
+         * String lineSeparator = System.getProperty("line.separator");
+         * if(TextUtils.isEmpty(lineSeparator)){ lineSeparator = "\n"; }
+         */
 
-		String lineSeparator = "\r\n";
+        String lineSeparator = "\r\n";
 
-		StringBuilder sb = new StringBuilder();
-		String logTime = "logTime:" + LogCollectorUtility.getCurrentTime();
+        StringBuilder sb = new StringBuilder();
+        String logTime = "logTime:" + LogCollectorUtility.getCurrentTime();
 
-		String exception = "exception:" + ex.toString();
+        String exception = "exception:" + ex.toString();
 
-		Writer info = new StringWriter();
-		PrintWriter printWriter = new PrintWriter(info);
-		ex.printStackTrace(printWriter);
-		
-		String dump = info.toString();
-		String crashMD5 = "crashMD5:"
-				+ LogCollectorUtility.getMD5Str(dump);
-		
-		String crashDump = "crashDump:" + "{" + dump + "}";
-		printWriter.close();
-		
+        Writer info = new StringWriter();
+        PrintWriter printWriter = new PrintWriter(info);
+        ex.printStackTrace(printWriter);
 
-		sb.append("&start---").append(lineSeparator);
-		sb.append(logTime).append(lineSeparator);
-		sb.append(appVerName).append(lineSeparator);
-		sb.append(appVerCode).append(lineSeparator);
-		sb.append(OsVer).append(lineSeparator);
-		sb.append(vendor).append(lineSeparator);
-		sb.append(model).append(lineSeparator);
-		sb.append(mid).append(lineSeparator);
-		sb.append(exception).append(lineSeparator);
-		sb.append(crashMD5).append(lineSeparator);
-		sb.append(crashDump).append(lineSeparator);
-		sb.append("&end---").append(lineSeparator).append(lineSeparator)
-				.append(lineSeparator);
+        String dump = info.toString();
+        String crashMD5 = "crashMD5:"
+                + LogCollectorUtility.getMD5Str(dump);
 
-		return sb.toString();
+        String crashDump = "crashDump:" + "{" + dump + "}";
+        printWriter.close();
 
-	}
 
-	private String fomatCrashInfoEncode(Throwable ex) {
+        sb.append("&start---").append(lineSeparator);
+        sb.append(logTime).append(lineSeparator);
+        sb.append(appVerName).append(lineSeparator);
+        sb.append(appVerCode).append(lineSeparator);
+        sb.append(OsVer).append(lineSeparator);
+        sb.append(vendor).append(lineSeparator);
+        sb.append(model).append(lineSeparator);
+        sb.append(mid).append(lineSeparator);
+        sb.append(exception).append(lineSeparator);
+        sb.append(crashMD5).append(lineSeparator);
+        sb.append(crashDump).append(lineSeparator);
+        sb.append("&end---").append(lineSeparator).append(lineSeparator)
+                .append(lineSeparator);
 
-		/*
-		 * String lineSeparator = System.getProperty("line.separator");
-		 * if(TextUtils.isEmpty(lineSeparator)){ lineSeparator = "\n"; }
-		 */
+        return sb.toString();
 
-		String lineSeparator = "\r\n";
+    }
 
-		StringBuilder sb = new StringBuilder();
-		String logTime = "logTime:" + LogCollectorUtility.getCurrentTime();
+    private String fomatCrashInfoEncode(Throwable ex) {
 
-		String exception = "exception:" + ex.toString();
+        /*
+         * String lineSeparator = System.getProperty("line.separator");
+         * if(TextUtils.isEmpty(lineSeparator)){ lineSeparator = "\n"; }
+         */
 
-		Writer info = new StringWriter();
-		PrintWriter printWriter = new PrintWriter(info);
-		ex.printStackTrace(printWriter);
+        String lineSeparator = "\r\n";
 
-		String dump = info.toString();
-		
-		String crashMD5 = "crashMD5:"
-				+ LogCollectorUtility.getMD5Str(dump);
-		
-		try {
-			dump = URLEncoder.encode(dump, CHARSET);
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		String crashDump = "crashDump:" + "{" + dump + "}";
-		printWriter.close();
-		
+        StringBuilder sb = new StringBuilder();
+        String logTime = "logTime:" + LogCollectorUtility.getCurrentTime();
 
-		sb.append("&start---").append(lineSeparator);
-		sb.append(logTime).append(lineSeparator);
-		sb.append(appVerName).append(lineSeparator);
-		sb.append(appVerCode).append(lineSeparator);
-		sb.append(OsVer).append(lineSeparator);
-		sb.append(vendor).append(lineSeparator);
-		sb.append(model).append(lineSeparator);
-		sb.append(mid).append(lineSeparator);
-		sb.append(exception).append(lineSeparator);
-		sb.append(crashMD5).append(lineSeparator);
-		sb.append(crashDump).append(lineSeparator);
-		sb.append("&end---").append(lineSeparator).append(lineSeparator)
-				.append(lineSeparator);
+        String exception = "exception:" + ex.toString();
 
-		String bes = Base64.encodeToString(sb.toString().getBytes(),
-				Base64.NO_WRAP);
+        Writer info = new StringWriter();
+        PrintWriter printWriter = new PrintWriter(info);
+        ex.printStackTrace(printWriter);
 
-		return bes;
+        String dump = info.toString();
 
-	}
+        String crashMD5 = "crashMD5:"
+                + LogCollectorUtility.getMD5Str(dump);
+
+        try {
+            dump = URLEncoder.encode(dump, CHARSET);
+        } catch (UnsupportedEncodingException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        String crashDump = "crashDump:" + "{" + dump + "}";
+        printWriter.close();
+
+
+        sb.append("&start---").append(lineSeparator);
+        sb.append(logTime).append(lineSeparator);
+        sb.append(appVerName).append(lineSeparator);
+        sb.append(appVerCode).append(lineSeparator);
+        sb.append(OsVer).append(lineSeparator);
+        sb.append(vendor).append(lineSeparator);
+        sb.append(model).append(lineSeparator);
+        sb.append(mid).append(lineSeparator);
+        sb.append(exception).append(lineSeparator);
+        sb.append(crashMD5).append(lineSeparator);
+        sb.append(crashDump).append(lineSeparator);
+        sb.append("&end---").append(lineSeparator).append(lineSeparator)
+                .append(lineSeparator);
+
+        String bes = Base64.encodeToString(sb.toString().getBytes(),
+                Base64.NO_WRAP);
+
+        return bes;
+
+    }
 
 }

@@ -4,14 +4,14 @@ import com.newland.wstdd.common.bean.TddActivity;
 
 //封面改变
 public class ModifyCoverReq {
-	private TddActivity tddActivity;
+    private TddActivity tddActivity;
 
-	public TddActivity getTddActivity() {
-		return tddActivity;
-	}
+    public TddActivity getTddActivity() {
+        return tddActivity;
+    }
 
-	public void setTddActivity(TddActivity tddActivity) {
-		this.tddActivity = tddActivity;
-	}
-	
+    public void setTddActivity(TddActivity tddActivity) {
+        this.tddActivity = tddActivity;
+    }
+
 }

@@ -5,6 +5,6 @@ import java.util.ArrayList;
 import android.widget.ImageView;
 
 public class AdsListInfo {
-	private ArrayList<ImageView> images;
-	
+    private ArrayList<ImageView> images;
+
 }

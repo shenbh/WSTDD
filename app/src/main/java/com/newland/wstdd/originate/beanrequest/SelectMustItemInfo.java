@@ -1,34 +1,33 @@
 package com.newland.wstdd.originate.beanrequest;
 
 import java.io.Serializable;
+
 /**
  * 必选项
- * @author Administrator
  *
+ * @author Administrator
  */
 public class SelectMustItemInfo implements Serializable {
 
-	//必选项
-	private String selectItem;//必选项
-	private boolean isSelect;
+    //必选项
+    private String selectItem;//必选项
+    private boolean isSelect;
 
-	public String getSelectItem() {
-		return selectItem;
-	}
+    public String getSelectItem() {
+        return selectItem;
+    }
 
-	public void setSelectItem(String selectItem) {
-		this.selectItem = selectItem;
-	}
+    public void setSelectItem(String selectItem) {
+        this.selectItem = selectItem;
+    }
 
-	public boolean isSelect() {
-		return isSelect;
-	}
+    public boolean isSelect() {
+        return isSelect;
+    }
 
-	public void setSelect(boolean isSelect) {
-		this.isSelect = isSelect;
-	}
-	
-	
-	
-	
+    public void setSelect(boolean isSelect) {
+        this.isSelect = isSelect;
+    }
+
+
 }

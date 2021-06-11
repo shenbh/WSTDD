@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/regist_finish_title"
@@ -16,14 +16,13 @@
 
     <ScrollView
         style="@style/layout_mm_style"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <com.newland.wstdd.mine.managerpage.ilike.LikeListViews
             android:id="@+id/likelist_listview"
             style="@style/layout_mw_style"
             android:divider="@null"
-            android:background="@color/white" >
-        </com.newland.wstdd.mine.managerpage.ilike.LikeListViews>
+            android:background="@color/white"></com.newland.wstdd.mine.managerpage.ilike.LikeListViews>
     </ScrollView>
 
 </LinearLayout>

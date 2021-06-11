@@ -12,27 +12,28 @@ import com.newland.wstdd.mine.managerpage.ilike.LikeListActivity;
 import com.newland.wstdd.mine.managerpage.ilike.beanresponse.LikeListRes;
 
 public class LikeListHandle extends Handler {
-	public static final int LIKE_LIST = 0;//第一次注册请求
-	private LikeListActivity context;
-	public LikeListHandle(LikeListActivity context) {
-		this.context = context;
-	}
+    public static final int LIKE_LIST = 0;//第一次注册请求
+    private LikeListActivity context;
 
-	@SuppressWarnings("static-access")
-	public void handleMessage(Message msg) {
-		switch (msg.what) {
-		case LIKE_LIST:
-			// 只有当msg.obj对象为空，表示访问服务器成功
-			if (msg.obj != null) {
-				if (msg.obj instanceof String) {
-					context.OnFailResultListener((String)msg.obj);
-				} else if (msg.obj instanceof LikeListRes) {
-					context.OnHandleResultListener(msg.obj, LIKE_LIST);
-				}
-			}
-			break;
-		}
-		super.handleMessage(msg);
-	}
+    public LikeListHandle(LikeListActivity context) {
+        this.context = context;
+    }
+
+    @SuppressWarnings("static-access")
+    public void handleMessage(Message msg) {
+        switch (msg.what) {
+            case LIKE_LIST:
+                // 只有当msg.obj对象为空，表示访问服务器成功
+                if (msg.obj != null) {
+                    if (msg.obj instanceof String) {
+                        context.OnFailResultListener((String) msg.obj);
+                    } else if (msg.obj instanceof LikeListRes) {
+                        context.OnHandleResultListener(msg.obj, LIKE_LIST);
+                    }
+                }
+                break;
+        }
+        super.handleMessage(msg);
+    }
 
 }

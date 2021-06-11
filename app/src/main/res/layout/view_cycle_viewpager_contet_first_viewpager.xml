@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
     <!-- android:scaleType 这个的作用是填充父布局 -->
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white" >
+        android:background="@color/white">
 
         <ImageView
             android:id="@+id/image"
@@ -23,7 +23,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:background="#ff7f00"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/countdown_ll"
@@ -33,7 +33,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="5dp"
                 android:background="#ff7f00"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/layout_ww_style"
@@ -45,7 +45,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@color/transparent"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <com.newland.wstdd.find.gridview.countdown.TimeTextView
                         android:id="@+id/temai_timeTextView"
@@ -79,7 +79,7 @@
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="4dp"
                 android:background="#ff7f00"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <TextView
                     style="@style/layout_ww_style"
@@ -107,7 +107,7 @@
             android:layout_alignParentRight="true"
             android:background="@color/transparenthalf"
             android:orientation="horizontal"
-            android:padding="3dip" >
+            android:padding="3dip">
 
             <TextView
                 android:id="@+id/imagetitle"

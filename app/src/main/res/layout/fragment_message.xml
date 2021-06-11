@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="#C4c1dF"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 消息 -->
 
@@ -18,14 +18,15 @@
         android:clickable="true"
         android:onClick="mineSafe"
         android:paddingLeft="5dip"
-        android:paddingRight="0dip" >
+        android:paddingRight="0dip">
 
         <ImageView
             style="@style/layout_image_style"
             android:layout_weight="0.1"
             android:src="@drawable/originate_chair_address_icon" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/head_title_second_style"
             android:layout_weight="0.8"
             android:paddingLeft="20dip"
@@ -51,21 +52,23 @@
         android:clickable="true"
         android:onClick="mineSafe"
         android:paddingLeft="5dip"
-        android:paddingRight="0dip" >
+        android:paddingRight="0dip">
 
         <ImageView
             style="@style/layout_image_style"
             android:layout_weight="0.1"
             android:src="@drawable/originate_chair_address_icon" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/head_title_second_style"
             android:layout_weight="0.8"
             android:paddingLeft="20dip"
             android:paddingRight="0dip"
             android:text="邀请我的" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -83,21 +86,23 @@
         android:clickable="true"
         android:onClick="mineSafe"
         android:paddingLeft="5dip"
-        android:paddingRight="0dip" >
+        android:paddingRight="0dip">
 
         <ImageView
             style="@style/layout_image_style"
             android:layout_weight="0.1"
             android:src="@drawable/originate_chair_address_icon" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/head_title_second_style"
             android:layout_weight="0.8"
             android:paddingLeft="20dip"
             android:paddingRight="0dip"
             android:text="信息中心" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -115,21 +120,23 @@
         android:clickable="true"
         android:onClick="mineSafe"
         android:paddingLeft="5dip"
-        android:paddingRight="0dip" >
+        android:paddingRight="0dip">
 
         <ImageView
             style="@style/layout_image_style"
             android:layout_weight="0.1"
             android:src="@drawable/originate_chair_address_icon" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/head_title_second_style"
             android:layout_weight="0.8"
             android:paddingLeft="20dip"
             android:paddingRight="0dip"
             android:text="@string/mine_setting_safe" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -147,21 +154,23 @@
         android:clickable="true"
         android:onClick="mineSafe"
         android:paddingLeft="5dip"
-        android:paddingRight="0dip" >
+        android:paddingRight="0dip">
 
         <ImageView
             style="@style/layout_image_style"
             android:layout_weight="0.1"
             android:src="@drawable/originate_chair_address_icon" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/head_title_second_style"
             android:layout_weight="0.8"
             android:paddingLeft="20dip"
             android:paddingRight="0dip"
             android:text="@string/mine_setting_safe" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -179,21 +188,23 @@
         android:clickable="true"
         android:onClick="mineSafe"
         android:paddingLeft="5dip"
-        android:paddingRight="0dip" >
+        android:paddingRight="0dip">
 
         <ImageView
             style="@style/layout_image_style"
             android:layout_weight="0.1"
             android:src="@drawable/originate_chair_address_icon" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/head_title_second_style"
             android:layout_weight="0.8"
             android:paddingLeft="20dip"
             android:paddingRight="0dip"
             android:text="@string/mine_setting_safe" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

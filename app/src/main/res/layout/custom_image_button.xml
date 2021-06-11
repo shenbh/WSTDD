@@ -3,12 +3,12 @@
     android:id="@+id/custom_image_button_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center_vertical" >
+    android:gravity="center_vertical">
 
     <LinearLayout
         style="@style/layout_mw_style"
         android:background="@color/bg_gray"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/registration_edit_listview_item_toprl1"
@@ -16,7 +16,7 @@
             android:background="@color/text_red"
             android:orientation="horizontal"
             android:paddingBottom="10dip"
-            android:paddingTop="10dip" >
+            android:paddingTop="10dip">
 
             <TextView
                 android:id="@+id/registration_edit_sxtop_name"
@@ -55,7 +55,7 @@
             android:id="@+id/registration_edit_listview_item_toprl2"
             style="@style/layout_mw_style"
             android:background="@color/white"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 style="@style/layout_ww_style"
@@ -84,7 +84,7 @@
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingLeft="20dip" >
+            android:paddingLeft="20dip">
 
             <TextView
                 android:id="@+id/registration_item_child_textview"
@@ -95,7 +95,8 @@
                 android:text="姓名"
                 android:textSize="14sp" />
 
-            <EditText  android:textColorHint="@color/hint_textview"
+            <EditText
+                android:textColorHint="@color/hint_textview"
                 android:id="@+id/registration_item_child_editext"
                 style="@style/layout_mW_44H_style"
                 android:layout_gravity="center_vertical"

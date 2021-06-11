@@ -5,19 +5,19 @@
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
     android:orientation="vertical"
-    android:scrollbars="none" >
+    android:scrollbars="none">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dip"
         android:layout_weight="1"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/layout1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <include layout="@layout/line_nopadding" />
 
@@ -39,7 +39,7 @@
                 android:id="@+id/relativelayout1"
                 android:layout_width="match_parent"
                 android:layout_height="50dip"
-                android:background="@color/white" >
+                android:background="@color/white">
 
                 <ImageView
                     android:id="@+id/tuanda_iv"
@@ -104,8 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#fff"
-                android:divider="@null" >
-            </com.newland.wstdd.mine.applyList.BasePassListView>
+                android:divider="@null"></com.newland.wstdd.mine.applyList.BasePassListView>
 
             <include layout="@layout/line_nopadding" />
 
@@ -124,8 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#fff"
-                android:divider="@null" >
-            </com.newland.wstdd.mine.applyList.BasePassListView>
+                android:divider="@null"></com.newland.wstdd.mine.applyList.BasePassListView>
 
             <include layout="@layout/line_nopadding" />
         </LinearLayout>
@@ -139,14 +137,14 @@
         android:layout_height="40dp"
         android:background="@color/white"
         android:orientation="horizontal"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/white"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <!-- <CheckBox -->
             <!-- android:id="@+id/allchose_checkbox" -->
@@ -204,7 +202,7 @@
         style="@style/layout_mW_40H_style"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/applist_tm_allchose_tv"

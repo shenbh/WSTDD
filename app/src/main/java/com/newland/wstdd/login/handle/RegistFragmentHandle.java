@@ -11,39 +11,40 @@ import com.newland.wstdd.login.login.LoginFragment;
 import com.newland.wstdd.login.regist.RegistFragment;
 
 public class RegistFragmentHandle extends Handler {
-	public static final int REGIST_FIRST = 0;//第一次注册请求
-	public static final int CHECK_CODE = 1;//获取到验证码
-	private RegistFragment context;
-	public RegistFragmentHandle(RegistFragment context) {
-		this.context = context;
-	}
+    public static final int REGIST_FIRST = 0;//第一次注册请求
+    public static final int CHECK_CODE = 1;//获取到验证码
+    private RegistFragment context;
 
-	@SuppressWarnings("static-access")
-	public void handleMessage(Message msg) {
-		switch (msg.what) {
-		case REGIST_FIRST:
-			// 只有当msg.obj对象为空，表示访问服务器成功
-			if (msg.obj != null) {
-				if (msg.obj instanceof String) {
-					context.OnFailResultListener((String)msg.obj);
-				} else if (msg.obj instanceof RegistFirstRes) {
-					context.OnHandleResultListener(msg.obj, REGIST_FIRST);
-				}
-			}
-			break;
-		
-	  case CHECK_CODE:
-		// 只有当msg.obj对象为空，表示访问服务器成功
-		if (msg.obj != null) {
-			if (msg.obj instanceof String) {
-				context.OnFailResultListener((String)msg.obj);
-			} else if (msg.obj instanceof CheckCodeRes) {
-				context.OnHandleResultListener(msg.obj, CHECK_CODE);
-			}
-		}
-		break;
-		}
-		super.handleMessage(msg);
-	}
+    public RegistFragmentHandle(RegistFragment context) {
+        this.context = context;
+    }
+
+    @SuppressWarnings("static-access")
+    public void handleMessage(Message msg) {
+        switch (msg.what) {
+            case REGIST_FIRST:
+                // 只有当msg.obj对象为空，表示访问服务器成功
+                if (msg.obj != null) {
+                    if (msg.obj instanceof String) {
+                        context.OnFailResultListener((String) msg.obj);
+                    } else if (msg.obj instanceof RegistFirstRes) {
+                        context.OnHandleResultListener(msg.obj, REGIST_FIRST);
+                    }
+                }
+                break;
+
+            case CHECK_CODE:
+                // 只有当msg.obj对象为空，表示访问服务器成功
+                if (msg.obj != null) {
+                    if (msg.obj instanceof String) {
+                        context.OnFailResultListener((String) msg.obj);
+                    } else if (msg.obj instanceof CheckCodeRes) {
+                        context.OnHandleResultListener(msg.obj, CHECK_CODE);
+                    }
+                }
+                break;
+        }
+        super.handleMessage(msg);
+    }
 
 }

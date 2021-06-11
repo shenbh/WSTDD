@@ -2,15 +2,16 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="none" >
+    android:scrollbars="none">
 
     <LinearLayout
         android:id="@+id/layout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dip"
@@ -20,10 +21,10 @@
             android:id="@+id/mylistview1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fff" >
-        </com.newland.wstdd.mine.registrationlist.BasePassListView>
+            android:background="#fff"></com.newland.wstdd.mine.registrationlist.BasePassListView>
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="5dip"
@@ -33,8 +34,7 @@
             android:id="@+id/mylistview2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#fff" >
-        </com.newland.wstdd.mine.registrationlist.BasePassListView>
+            android:background="#fff"></com.newland.wstdd.mine.registrationlist.BasePassListView>
     </LinearLayout>
 
 </ScrollView>

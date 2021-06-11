@@ -3,211 +3,207 @@ package com.newland.wstdd.common.mail;
 import java.util.Properties;
 
 /**
- * 
- * 
- 发送邮件需要使用的基本信息
+ * 发送邮件需要使用的基本信息
  */
 
 public class MailSenderInfo {
 
-	// 发送邮件的服务器的IP和端口
+    // 发送邮件的服务器的IP和端口
 
-	private String mailServerHost;
+    private String mailServerHost;
 
-	private String mailServerPort = "25";
+    private String mailServerPort = "25";
 
-	// 邮件发送者的地址
+    // 邮件发送者的地址
 
-	private String fromAddress;
+    private String fromAddress;
 
-	// 邮件接收者的地址
+    // 邮件接收者的地址
 
-	private String toAddress;
+    private String toAddress;
 
-	// 登陆邮件发送服务器的用户名和密码
+    // 登陆邮件发送服务器的用户名和密码
 
-	private String userName;
+    private String userName;
 
-	private String password;
+    private String password;
 
-	// 是否需要身份验证
+    // 是否需要身份验证
 
-	private boolean
+    private boolean
 
-	validate = false;
+            validate = false;
 
-	// 邮件主题
+    // 邮件主题
 
-	private String subject;
+    private String subject;
 
-	// 邮件的文本内容
+    // 邮件的文本内容
 
-	private String content;
+    private String content;
 
-	// 邮件附件的文件名
+    // 邮件附件的文件名
 
-	private String[] attachFileNames;
+    private String[] attachFileNames;
 
-	/**
-	 * 
-	 * 
-	 获得邮件会话属性
-	 */
+    /**
+     * 获得邮件会话属性
+     */
 
-	public Properties getProperties() {
+    public Properties getProperties() {
 
-		Properties p = new Properties();
+        Properties p = new Properties();
 
-		p.put("mail.smtp.host", this.mailServerHost);
+        p.put("mail.smtp.host", this.mailServerHost);
 
-		p.put("mail.smtp.port", this.mailServerPort);
+        p.put("mail.smtp.port", this.mailServerPort);
 
-		p.put("mail.smtp.auth", validate ? "true" : "false");
+        p.put("mail.smtp.auth", validate ? "true" : "false");
 
-		return p;
+        return p;
 
-	}
+    }
 
-	public String getMailServerHost() {
+    public String getMailServerHost() {
 
-		return mailServerHost;
+        return mailServerHost;
 
-	}
+    }
 
-	public void
+    public void
 
-	setMailServerHost(String mailServerHost) {
+    setMailServerHost(String mailServerHost) {
 
-		this.mailServerHost = mailServerHost;
+        this.mailServerHost = mailServerHost;
 
-	}
+    }
 
-	public String getMailServerPort() {
+    public String getMailServerPort() {
 
-		return mailServerPort;
+        return mailServerPort;
 
-	}
+    }
 
-	public void
+    public void
 
-	setMailServerPort(String mailServerPort) {
+    setMailServerPort(String mailServerPort) {
 
-		this.mailServerPort = mailServerPort;
+        this.mailServerPort = mailServerPort;
 
-	}
+    }
 
-	public boolean
+    public boolean
 
-	isValidate() {
+    isValidate() {
 
-		return validate;
+        return validate;
 
-	}
+    }
 
-	public void
+    public void
 
-	setValidate(boolean validate) {
+    setValidate(boolean validate) {
 
-		this.validate = validate;
+        this.validate = validate;
 
-	}
+    }
 
-	public String[] getAttachFileNames() {
+    public String[] getAttachFileNames() {
 
-		return attachFileNames;
+        return attachFileNames;
 
-	}
+    }
 
-	public void
+    public void
 
-	setAttachFileNames(String[] fileNames) {
+    setAttachFileNames(String[] fileNames) {
 
-		this.attachFileNames = fileNames;
+        this.attachFileNames = fileNames;
 
-	}
+    }
 
-	public String getFromAddress() {
+    public String getFromAddress() {
 
-		return fromAddress;
+        return fromAddress;
 
-	}
+    }
 
-	public void
+    public void
 
-	setFromAddress(String fromAddress) {
+    setFromAddress(String fromAddress) {
 
-		this.fromAddress = fromAddress;
+        this.fromAddress = fromAddress;
 
-	}
+    }
 
-	public String getPassword() {
+    public String getPassword() {
 
-		return password;
+        return password;
 
-	}
+    }
 
-	public void
+    public void
 
-	setPassword(String password) {
+    setPassword(String password) {
 
-		this.password = password;
+        this.password = password;
 
-	}
+    }
 
-	public String getToAddress() {
+    public String getToAddress() {
 
-		return toAddress;
+        return toAddress;
 
-	}
+    }
 
-	public void
+    public void
 
-	setToAddress(String toAddress) {
+    setToAddress(String toAddress) {
 
-		this.toAddress = toAddress;
+        this.toAddress = toAddress;
 
-	}
+    }
 
-	public String getUserName() {
+    public String getUserName() {
 
-		return userName;
+        return userName;
 
-	}
+    }
 
-	public void
+    public void
 
-	setUserName(String userName) {
+    setUserName(String userName) {
 
-		this.userName = userName;
+        this.userName = userName;
 
-	}
+    }
 
-	public String getSubject() {
+    public String getSubject() {
 
-		return subject;
+        return subject;
 
-	}
+    }
 
-	public void
+    public void
 
-	setSubject(String subject) {
+    setSubject(String subject) {
 
-		this.subject = subject;
+        this.subject = subject;
 
-	}
+    }
 
-	public String getContent() {
+    public String getContent() {
 
-		return content;
+        return content;
 
-	}
+    }
 
-	public void
+    public void
 
-	setContent(String textContent) {
+    setContent(String textContent) {
 
-		this.content = textContent;
+        this.content = textContent;
 
-	}
+    }
 
 }

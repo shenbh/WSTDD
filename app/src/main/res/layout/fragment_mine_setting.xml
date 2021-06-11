@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 我的设置 -->
 
@@ -11,12 +11,12 @@
 
     <ImageView style="@style/layout_image_hline_style" />
 
-    <ScrollView style="@style/layout_mm_style" >
+    <ScrollView style="@style/layout_mm_style">
 
         <LinearLayout
             style="@style/layout_mm_style"
             android:orientation="vertical"
-            android:padding="5dip" >
+            android:padding="5dip">
 
             <LinearLayout
                 android:id="@+id/mine_setting_safe_ll"
@@ -26,14 +26,15 @@
                 android:background="@color/white"
                 android:clickable="true"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"
@@ -62,14 +63,15 @@
                 android:background="@color/white"
                 android:clickable="true"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"
@@ -100,14 +102,15 @@
                 android:clickable="true"
                 android:onClick="mineClean"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"
@@ -131,14 +134,15 @@
                 android:clickable="true"
                 android:onClick="mineHelp"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"
@@ -162,14 +166,15 @@
                 android:clickable="true"
                 android:onClick="mineShare"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"
@@ -194,14 +199,15 @@
                 android:clickable="true"
                 android:onClick="mineAbout"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"
@@ -231,14 +237,15 @@
                 android:clickable="true"
                 android:onClick="mineScoring"
                 android:paddingLeft="5dip"
-                android:paddingRight="0dip" >
+                android:paddingRight="0dip">
 
                 <ImageView
                     style="@style/layout_image_style"
                     android:layout_weight="0.1"
                     android:src="@drawable/originate_chair_address_icon" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     style="@style/head_title_second_style"
                     android:layout_weight="0.8"
                     android:paddingLeft="20dip"

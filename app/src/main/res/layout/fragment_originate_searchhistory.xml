@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <ScrollView style="@style/layout_mm_style" >
+    <ScrollView style="@style/layout_mm_style">
 
-        <RelativeLayout style="@style/layout_mw_style" >
+        <RelativeLayout style="@style/layout_mw_style">
 
-            <TextView android:textSize="14sp"
+            <TextView
+                android:textSize="14sp"
                 android:id="@+id/originate_interestcontent_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,9 +34,10 @@
                 android:layout_below="@+id/imageView1"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dip"
-                android:layout_marginTop="5dip" >
+                android:layout_marginTop="5dip">
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags11_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_marginRight="3dip"
@@ -43,7 +45,8 @@
                     android:gravity="center"
                     android:textColor="@color/gray" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags12_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_marginRight="3dip"
@@ -51,7 +54,8 @@
                     android:gravity="center"
                     android:textColor="@color/gray" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags13_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_marginRight="3dip"
@@ -59,7 +63,8 @@
                     android:gravity="center"
                     android:textColor="@color/gray" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags14_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_weight="1"
@@ -74,9 +79,10 @@
                 android:layout_below="@+id/linearlayout1"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dip"
-                android:layout_marginTop="5dip" >
+                android:layout_marginTop="5dip">
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags21_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_marginRight="3dip"
@@ -84,7 +90,8 @@
                     android:gravity="center"
                     android:textColor="@color/gray" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags22_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_marginRight="3dip"
@@ -92,7 +99,8 @@
                     android:gravity="center"
                     android:textColor="@color/gray" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags23_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_marginRight="3dip"
@@ -100,7 +108,8 @@
                     android:gravity="center"
                     android:textColor="@color/gray" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/tags24_tv"
                     style="@style/layout_tv_mw_round"
                     android:layout_weight="1"
@@ -108,7 +117,8 @@
                     android:textColor="@color/gray" />
             </LinearLayout>
 
-            <TextView android:textSize="15sp"
+            <TextView
+                android:textSize="15sp"
                 android:id="@+id/originate_history_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -130,9 +140,8 @@
                 android:id="@+id/originate_history_lv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-               	android:divider="@null"
-                android:layout_below="@+id/imageView2" >
-            </com.newland.wstdd.common.view.FindListViews>
+                android:divider="@null"
+                android:layout_below="@+id/imageView2"></com.newland.wstdd.common.view.FindListViews>
 
             <View
                 android:id="@+id/view3"
@@ -141,7 +150,8 @@
                 android:layout_below="@+id/originate_history_lv"
                 android:background="@color/line_gray" />
 
-            <TextView android:textSize="14sp"
+            <TextView
+                android:textSize="14sp"
                 android:id="@+id/originate_cleanhistory_tv"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

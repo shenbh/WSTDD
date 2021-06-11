@@ -31,21 +31,23 @@ public class Des3 {
 
     /**
      * 拼装秘钥
+     *
      * @return
      * @throws Exception
      */
-    private static String getKey(String var){
-        return var+secretKey;
+    private static String getKey(String var) {
+        return var + secretKey;
     }
 
     /**
      * 3DES加密
-     * @param var 秘钥 拼装参数
+     *
+     * @param var       秘钥 拼装参数
      * @param plainText 普通文本
      * @return
      * @throws Exception
      */
-    public static String encode(String plainText,String var) {
+    public static String encode(String plainText, String var) {
         Key deskey = null;
         DESedeKeySpec spec = null;
         try {
@@ -79,12 +81,13 @@ public class Des3 {
 
     /**
      * 3DES解密
-     * @param var 秘钥 拼装参数
+     *
+     * @param var         秘钥 拼装参数
      * @param encryptText 加密文本
      * @return
      * @throws Exception
      */
-    public static String decode(String encryptText,String var){
+    public static String decode(String encryptText, String var) {
         Key deskey = null;
         DESedeKeySpec spec = null;
         try {

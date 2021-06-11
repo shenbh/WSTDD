@@ -37,211 +37,207 @@ import com.newland.wstdd.shortcut.ShortCutActivity;
 
 /**
  * 主界面 包括 底部的五个按钮的监听事件
- * 
+ *
  * @author Administrator
- * 
  */
 public class MainFragment extends Fragment implements OnCheckedChangeListener {
-	
-	public class MyClick implements OnClickListener {
 
-		@Override
-		public void onClick(View v) {
-			switch (v.getId()) {
-			case R.id.shortcut_botton_icon://快捷界面
-				if("false".equals(AppContext.getAppContext().getIsLogin())){
+    public class MyClick implements OnClickListener {
+
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.shortcut_botton_icon://快捷界面
+                    if ("false".equals(AppContext.getAppContext().getIsLogin())) {
 //					UiHelper.ShowOneToast(getActivity(), "该操作需要登录后进行！");
-					UiToUiHelper.showLogin(getActivity());
-				}else{
+                        UiToUiHelper.showLogin(getActivity());
+                    } else {
 //					Intent intent = new Intent(getActivity(), ShortCutActivity.class);
 //					startActivity(intent);
-					if("true".equals(AppContext.getAppContext().getIsLogin())){
-						Intent intent = new Intent(getActivity(), OriginateChairActivity.class);
-						Bundle bundle = new Bundle();
-						bundle.putInt("activity_type", ActivityType.typeShortCut);
-						bundle.putString("activity_action", "publish");
-						intent.putExtras(bundle);
-						getActivity().startActivity(intent);
-					}else{
-						UiToUiHelper.showLogin(getActivity());
-					}
-					break;
-				}
-				
-				break;
+                        if ("true".equals(AppContext.getAppContext().getIsLogin())) {
+                            Intent intent = new Intent(getActivity(), OriginateChairActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putInt("activity_type", ActivityType.typeShortCut);
+                            bundle.putString("activity_action", "publish");
+                            intent.putExtras(bundle);
+                            getActivity().startActivity(intent);
+                        } else {
+                            UiToUiHelper.showLogin(getActivity());
+                        }
+                        break;
+                    }
 
-			default:
-				break;
-			}
-		}
+                    break;
 
-	}
+                default:
+                    break;
+            }
+        }
 
-	private View view;
-	private HomeViewPager mViewPager;
-	private RadioGroup mRadioGroup;
-	private PengRadioButton mRadioButton1, mRadioButton2, mRadioButton3, mRadioButton4;
-	private ImageView shortCutIconImageView;
-	private ImageView mImageView;
-	private float mCurrentCheckedRadioLeft;
-	private List<Fragment> mFragmentList;
-	private HomeFragmentAdapter adapter;
+    }
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		view = inflater.inflate(R.layout.fragment_main, null);
-		initView();
-		initListener();
-		return view;
-	}
+    private View view;
+    private HomeViewPager mViewPager;
+    private RadioGroup mRadioGroup;
+    private PengRadioButton mRadioButton1, mRadioButton2, mRadioButton3, mRadioButton4;
+    private ImageView shortCutIconImageView;
+    private ImageView mImageView;
+    private float mCurrentCheckedRadioLeft;
+    private List<Fragment> mFragmentList;
+    private HomeFragmentAdapter adapter;
 
-	public void initView() {
-		mFragmentList = new ArrayList<Fragment>();
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_main, null);
+        initView();
+        initListener();
+        return view;
+    }
 
-		mFragmentList.add(new OriginateFragment());
-		mFragmentList.add(new FindFragment());
-		mFragmentList.add(new MessageFragment());
-		mFragmentList.add(new MineFragment());
+    public void initView() {
+        mFragmentList = new ArrayList<Fragment>();
 
-		mViewPager = (HomeViewPager) view.findViewById(R.id.pager);
-		initViewPagerScroll();
-		mRadioGroup = (RadioGroup) view.findViewById(R.id.radio);
-		mRadioButton1 = (PengRadioButton) view.findViewById(R.id.btn1);
-		mRadioButton2 = (PengRadioButton) view.findViewById(R.id.btn2);
-		mRadioButton3 = (PengRadioButton) view.findViewById(R.id.btn3);
-		mRadioButton4 = (PengRadioButton) view.findViewById(R.id.btn4);
-		shortCutIconImageView = (ImageView) view.findViewById(R.id.shortcut_botton_icon);
-		shortCutIconImageView.setOnClickListener(new MyClick());
-		adapter = new HomeFragmentAdapter(getChildFragmentManager(), mFragmentList);
-		adapter.setFragments((ArrayList<Fragment>) mFragmentList);	
-		mViewPager.setAdapter(adapter);
-		mViewPager.setOffscreenPageLimit(3);//太重要了，可以秒滑动
-		mViewPager.setSlipping(false);
-		mRadioButton1.setChecked(true);
-		mRadioButton3.setOnTouchListener(new OnTouchListener() {
-			
-			@Override
-			public boolean onTouch(View v, MotionEvent event) {
-				// TODO Auto-generated method stub
-				UiHelper.ShowOneToast(getActivity(), "该功能正在开发中,敬请期待");
-				return true;
-			}
-		});
-	}
+        mFragmentList.add(new OriginateFragment());
+        mFragmentList.add(new FindFragment());
+        mFragmentList.add(new MessageFragment());
+        mFragmentList.add(new MineFragment());
 
-	private void initListener() {
-		mRadioGroup.setOnCheckedChangeListener(this);
-		mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
+        mViewPager = (HomeViewPager) view.findViewById(R.id.pager);
+        initViewPagerScroll();
+        mRadioGroup = (RadioGroup) view.findViewById(R.id.radio);
+        mRadioButton1 = (PengRadioButton) view.findViewById(R.id.btn1);
+        mRadioButton2 = (PengRadioButton) view.findViewById(R.id.btn2);
+        mRadioButton3 = (PengRadioButton) view.findViewById(R.id.btn3);
+        mRadioButton4 = (PengRadioButton) view.findViewById(R.id.btn4);
+        shortCutIconImageView = (ImageView) view.findViewById(R.id.shortcut_botton_icon);
+        shortCutIconImageView.setOnClickListener(new MyClick());
+        adapter = new HomeFragmentAdapter(getChildFragmentManager(), mFragmentList);
+        adapter.setFragments((ArrayList<Fragment>) mFragmentList);
+        mViewPager.setAdapter(adapter);
+        mViewPager.setOffscreenPageLimit(3);//太重要了，可以秒滑动
+        mViewPager.setSlipping(false);
+        mRadioButton1.setChecked(true);
+        mRadioButton3.setOnTouchListener(new OnTouchListener() {
 
-			@Override
-			public void onPageSelected(int position) {
-				
-				
-				if (position >= 2) {
-					
-						((RadioButton) mRadioGroup.getChildAt(position + 1)).setChecked(true);// 这句话的作用是滑动的时，底部的按钮颜色也会改变
-					
-					
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                // TODO Auto-generated method stub
+                UiHelper.ShowOneToast(getActivity(), "该功能正在开发中,敬请期待");
+                return true;
+            }
+        });
+    }
 
-				} else {
-					((RadioButton) mRadioGroup.getChildAt(position)).setChecked(true);// 这句话的作用是滑动的时，底部的按钮颜色也会改变
+    private void initListener() {
+        mRadioGroup.setOnCheckedChangeListener(this);
+        mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
 
-				}
-				
-			}
+            @Override
+            public void onPageSelected(int position) {
 
-			@Override
-			public void onPageScrolled(int arg0, float arg1, int arg2) {
 
-			}
+                if (position >= 2) {
 
-			@Override
-			public void onPageScrollStateChanged(int arg0) {
+                    ((RadioButton) mRadioGroup.getChildAt(position + 1)).setChecked(true);// 这句话的作用是滑动的时，底部的按钮颜色也会改变
 
-			}
-		});
-	}
 
-	@Override
-	public void onCheckedChanged(RadioGroup group, int checkedId) {
-		switch (checkedId) {
-		case R.id.btn1:
-			mViewPager.setCurrentItem(0);
-			break;
-		case R.id.btn2:
-			mViewPager.setCurrentItem(1);
-			break;
-		case R.id.btn3:
+                } else {
+                    ((RadioButton) mRadioGroup.getChildAt(position)).setChecked(true);// 这句话的作用是滑动的时，底部的按钮颜色也会改变
+
+                }
+
+            }
+
+            @Override
+            public void onPageScrolled(int arg0, float arg1, int arg2) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int arg0) {
+
+            }
+        });
+    }
+
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.btn1:
+                mViewPager.setCurrentItem(0);
+                break;
+            case R.id.btn2:
+                mViewPager.setCurrentItem(1);
+                break;
+            case R.id.btn3:
 //			mViewPager.setCurrentItem(2);
-			UiHelper.ShowOneToast(getActivity(), "该功能正在开发中,敬请期待");
-			break;
-		case R.id.btn4:
-			mViewPager.setCurrentItem(3);
-			break;
+                UiHelper.ShowOneToast(getActivity(), "该功能正在开发中,敬请期待");
+                break;
+            case R.id.btn4:
+                mViewPager.setCurrentItem(3);
+                break;
 
-		default:
-			break;
-		}
-	}
+            default:
+                break;
+        }
+    }
 
-	@Override
-	public void onDetach() {
-		super.onDetach();
+    @Override
+    public void onDetach() {
+        super.onDetach();
 
-	try {
-			Field childFragmentManager = Fragment.class
-					.getDeclaredField("mChildFragmentManager");
-			childFragmentManager.setAccessible(true);
-			childFragmentManager.set(this, null);
+        try {
+            Field childFragmentManager = Fragment.class
+                    .getDeclaredField("mChildFragmentManager");
+            childFragmentManager.setAccessible(true);
+            childFragmentManager.set(this, null);
 
-		} catch (NoSuchFieldException e) {
-			throw new RuntimeException(e);
-		} catch (IllegalAccessException e) {
-			throw new RuntimeException(e);
-		}
+        } catch (NoSuchFieldException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        }
 
-	}
+    }
 
-	public static MainFragment newInstance(String string) {
-		MainFragment newFragment = new MainFragment();
-		Bundle bundle = new Bundle();
-		bundle.putString("hello", string);
-		newFragment.setArguments(bundle);
-		return newFragment;
-	}
+    public static MainFragment newInstance(String string) {
+        MainFragment newFragment = new MainFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("hello", string);
+        newFragment.setArguments(bundle);
+        return newFragment;
+    }
 
-	@Override
-	public void onDestroyView() {
-		super.onDestroyView();
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
 
-	}
-	  private void initViewPagerScroll( ){
+    }
 
-		    try {
+    private void initViewPagerScroll() {
 
-		            Field mScroller = null;
+        try {
 
-		            mScroller = ViewPager.class.getDeclaredField("mScroller");
+            Field mScroller = null;
 
-		            mScroller.setAccessible(true); 
+            mScroller = ViewPager.class.getDeclaredField("mScroller");
 
-		            ViewPagerScroller scroller = new ViewPagerScroller( mViewPager.getContext( ) );
+            mScroller.setAccessible(true);
 
-		            mScroller.set( mViewPager, scroller);
+            ViewPagerScroller scroller = new ViewPagerScroller(mViewPager.getContext());
 
-		        }catch(NoSuchFieldException e){
+            mScroller.set(mViewPager, scroller);
 
-		        
+        } catch (NoSuchFieldException e) {
 
-		        }catch (IllegalArgumentException e){
 
-		        
+        } catch (IllegalArgumentException e) {
 
-		        }catch (IllegalAccessException e){
 
-		        
+        } catch (IllegalAccessException e) {
 
-		        }
 
-		    }
+        }
+
+    }
 }

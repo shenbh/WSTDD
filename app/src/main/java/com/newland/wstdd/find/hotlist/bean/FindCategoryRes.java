@@ -6,19 +6,19 @@ import com.newland.wstdd.common.bean.TddActivity;
 
 /**
  * 发现8个分类查询信息 返回    讲座  运动  娱乐
- * @author Administrator
  *
+ * @author Administrator
  */
 public class FindCategoryRes {
 
-	private List<TddActivity> acList;//返回的列表对象
+    private List<TddActivity> acList;//返回的列表对象
 
-	public List<TddActivity> getAcList() {
-		return acList;
-	}
+    public List<TddActivity> getAcList() {
+        return acList;
+    }
 
-	public void setAcList(List<TddActivity> acList) {
-		this.acList = acList;
-	}
-	
+    public void setAcList(List<TddActivity> acList) {
+        this.acList = acList;
+    }
+
 }

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;
 
- 
 
 public class FindGridView extends GridView {
 
@@ -14,7 +13,6 @@ public class FindGridView extends GridView {
 
     }
 
- 
 
     public FindGridView(Context context, AttributeSet attrs) {
 
@@ -22,7 +20,6 @@ public class FindGridView extends GridView {
 
     }
 
- 
 
     public FindGridView(Context context, AttributeSet attrs, int defStyle) {
 
@@ -30,7 +27,6 @@ public class FindGridView extends GridView {
 
     }
 
- 
 
     @Override
 
@@ -38,7 +34,6 @@ public class FindGridView extends GridView {
 
         int heightSpec;
 
- 
 
         if (getLayoutParams().height == LayoutParams.WRAP_CONTENT) {
 
@@ -52,9 +47,7 @@ public class FindGridView extends GridView {
 
                     Integer.MAX_VALUE >> 2, MeasureSpec.AT_MOST);
 
-        }
-
-        else {
+        } else {
 
             // Any other height should be <span id="6_nwp" style="width: auto; height: auto; float: none;"><a id="6_nwl" style="text-decoration: none;" href="http://cpro.baidu.com/cpro/ui/uijs.php?adclass=0&app_id=0&c=news&cf=1001&ch=0&di=128&fv=0&is_app=0&jk=253534860e1030ee&k=res&k0=res&kdi0=0&luki=3&n=10&p=baidu&q=31010181_cpr&rb=0&rs=1&seller_id=1&sid=ee30100e86343525&ssp2=1&stid=0&t=tpclicked3_hc&td=2318395&tu=u2318395&u=http%3A%2F%2Fblog%2Echengyunfeng%2Ecom%2F%3Fp%3D444&urlid=0" target="_blank" mpid="6"><span style="width: auto; height: auto; color: rgb(0, 0, 255); font-size: 14px; float: none;">res</span></a></span>pected as is.
 
@@ -62,7 +55,6 @@ public class FindGridView extends GridView {
 
         }
 
- 
 
         super.onMeasure(widthMeasureSpec, heightSpec);
 

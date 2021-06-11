@@ -4,18 +4,18 @@ import com.newland.wstdd.mine.beanresponse.TddUserCertificate;
 
 /**
  * 个人信息的编辑
- * @author Administrator
  *
+ * @author Administrator
  */
 public class MineEditPersonReq {
-	private TddUserCertificate tddUserCertificate;//编辑后封装的对象
+    private TddUserCertificate tddUserCertificate;//编辑后封装的对象
 
-	public TddUserCertificate getTddUserCertificate() {
-		return tddUserCertificate;
-	}
+    public TddUserCertificate getTddUserCertificate() {
+        return tddUserCertificate;
+    }
 
-	public void setTddUserCertificate(TddUserCertificate tddUserCertificate) {
-		this.tddUserCertificate = tddUserCertificate;
-	}
-	
+    public void setTddUserCertificate(TddUserCertificate tddUserCertificate) {
+        this.tddUserCertificate = tddUserCertificate;
+    }
+
 }

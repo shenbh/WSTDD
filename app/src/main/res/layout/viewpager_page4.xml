@@ -3,9 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <TextView android:textSize="14sp"
+    <TextView
+        android:textSize="14sp"
         android:id="@+id/sign_list_tag"
         android:layout_width="fill_parent"
         android:layout_height="313dip"
@@ -20,7 +21,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dip"
         android:background="#ff00ff"
-        android:text="点击开始体验"
-          />
+        android:text="点击开始体验" />
 
 </RelativeLayout>

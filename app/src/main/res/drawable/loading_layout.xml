@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:visibility="visible" >
+    android:visibility="visible">
 
     <ProgressBar
         android:id="@+id/gd_action_bar_item_progress_bar"

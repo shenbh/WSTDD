@@ -3,18 +3,18 @@
     xmlns:peng="http://schemas.android.com/apk/res/com.newland.wstdd"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/layout_mm_style"
-        android:layout_weight="5" >
+        android:layout_weight="5">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:gravity="left"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/select_cover_return_icon"
@@ -55,7 +55,7 @@
         android:layout_weight="1"
         android:background="@color/black"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <android.support.v4.view.ViewPager
             android:id="@+id/adv_pager"
@@ -63,8 +63,7 @@
             android:layout_height="fill_parent"
             android:layout_marginBottom="20dip"
             android:layout_marginTop="20dip"
-            android:gravity="center" >
-        </android.support.v4.view.ViewPager>
+            android:gravity="center"></android.support.v4.view.ViewPager>
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +72,7 @@
         android:layout_gravity="bottom"
         android:layout_weight="5"
         android:background="#444444"
-        android:gravity="center_vertical" >
+        android:gravity="center_vertical">
 
         <com.newland.wstdd.common.widget.PengTextView
             android:id="@+id/activity_selected_cover_iv"

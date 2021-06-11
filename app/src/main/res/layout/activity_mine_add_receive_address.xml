@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/alpha"
@@ -24,7 +24,7 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
         <TextView
             android:id="@+id/minereceiptaddress_receiptname_tv"
@@ -35,7 +35,8 @@
             android:textColor="@color/line_gray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/minereceiptaddress_receiptname_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,7 +52,7 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
         <TextView
             android:id="@+id/minereceiptaddress_phone_tv"
@@ -62,7 +63,8 @@
             android:textColor="@color/line_gray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/minereceiptaddress_phone_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,7 +82,7 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
         <TextView
             android:id="@+id/minereceiptaddress_area_tv"
@@ -114,7 +116,7 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
         <TextView
             android:id="@+id/minereceiptaddress_address_tv"
@@ -127,7 +129,8 @@
             android:textColor="@color/line_gray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/minereceiptaddress_address_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -144,7 +147,7 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
         <TextView
             android:id="@+id/minereceiptaddress_postalcode_tv"
@@ -155,7 +158,8 @@
             android:textColor="@color/line_gray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/minereceiptaddress_postalcode_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

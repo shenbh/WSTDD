@@ -58,7 +58,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">4dip</item>
     </style>
-    
+
     <style name="layout_mW_20H_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">20dip</item>
@@ -114,14 +114,15 @@
         <item name="android:layout_height">20dip</item>
     </style>
 
-     <style name="layout_wW_20H_style">
+    <style name="layout_wW_20H_style">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">20dip</item>
     </style>
+
     <style name="layout_tv_mw_round">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-<!--         <item name="android:background">@drawable/text_roundstyle</item> -->
+        <!--         <item name="android:background">@drawable/text_roundstyle</item> -->
     </style>
 
     <style name="layout_addaddress_tv_60W_wH_style">
@@ -167,7 +168,7 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
-    
+
     <style name="head_title_second_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -176,6 +177,7 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
+
     <style name="layout_about_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -194,7 +196,7 @@
         <item name="android:background">@color/white</item>
         <item name="android:clickable">true</item>
     </style>
-    
+
     <style name="layout_originate_head_title_style">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
@@ -244,6 +246,7 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
+
     <style name="middle_loading" parent="@style/loading">
         <item name="android:layout_width">48.0dip</item>
         <item name="android:layout_height">48.0dip</item>
@@ -257,9 +260,8 @@
     </style>
     <!-- LoadingDialog -->
 
-	
-    
-	<style name="maildialog" parent="@android:style/Theme.Dialog">
+
+    <style name="maildialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>
         <item name="android:windowIsTranslucent">true</item>
@@ -268,25 +270,24 @@
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:backgroundDimAmount">0.8</item>
- 
+
     </style>
-    
-	
-	 <style name="CustomDialog" parent="@android:style/Theme.Dialog">
-		<item name="android:windowFrame">@null</item>
-    	<item name="android:windowIsFloating">true</item>
-    	<item name="android:windowContentOverlay">@null</item>
-    	<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
-    	<item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
-	</style>
-	
-	<!-- 菊花 -->
-	<style name="CustomProgressDialog" parent="@style/CustomDialog">
-		<item name="android:windowBackground">@android:color/transparent</item>
-		<item name="android:backgroundDimEnabled">false</item>
-    	<item name="android:windowNoTitle">true</item>
-	</style>
-	
-	
+
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <!-- 菊花 -->
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 
 </resources>

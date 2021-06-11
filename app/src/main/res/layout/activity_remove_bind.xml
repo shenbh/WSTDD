@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 我的-个人信息 -->
 
@@ -22,7 +22,7 @@
         android:paddingBottom="10dip"
         android:paddingLeft="20dip"
         android:paddingRight="20dip"
-        android:paddingTop="10dip" >
+        android:paddingTop="10dip">
 
         <TextView
             android:layout_width="match_parent"
@@ -75,7 +75,7 @@
         android:paddingBottom="10dip"
         android:paddingLeft="20dip"
         android:paddingRight="20dip"
-        android:paddingTop="10dip" >
+        android:paddingTop="10dip">
 
         <TextView
             android:layout_width="match_parent"

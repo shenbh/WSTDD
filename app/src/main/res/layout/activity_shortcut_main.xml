@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 快捷 -->
 
@@ -12,13 +12,13 @@
         android:id="@+id/activity_shortcut_title_ll"
         android:layout_width="match_parent"
         android:layout_height="46dip"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="45dip"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/head_left_tv"
@@ -52,10 +52,10 @@
                 android:textSize="14sp" />
         </RelativeLayout>
 
-        <include layout="@layout/line_nopadding"/>
+        <include layout="@layout/line_nopadding" />
     </LinearLayout>
 
-    <EditText  
+    <EditText
         android:id="@+id/activity_shortcut_contentedt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

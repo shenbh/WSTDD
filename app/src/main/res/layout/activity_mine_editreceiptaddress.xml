@@ -5,9 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
-    <TextView android:textSize="14sp"
+    <TextView
+        android:textSize="14sp"
         android:id="@+id/alpha"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,9 +24,10 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_receiptname_tv"
             android:layout_width="60dip"
             android:layout_height="wrap_content"
@@ -33,7 +35,9 @@
             android:text="收货人"
             android:textColor="@color/lightgray" />
 
-        <EditText  android:textColorHint="@color/hint_textview" android:textSize="14sp" 
+        <EditText
+            android:textColorHint="@color/hint_textview"
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_receiptname_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -48,9 +52,10 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_phone_tv"
             android:layout_width="60dip"
             android:layout_height="wrap_content"
@@ -58,7 +63,9 @@
             android:text="手机号码"
             android:textColor="@color/lightgray" />
 
-        <EditText  android:textColorHint="@color/hint_textview" android:textSize="14sp" 
+        <EditText
+            android:textColorHint="@color/hint_textview"
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_phone_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,9 +82,10 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_area_tv"
             android:layout_width="60dip"
             android:layout_height="wrap_content"
@@ -85,7 +93,8 @@
             android:text="所在区域"
             android:textColor="@color/lightgray" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_area_content_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -107,9 +116,10 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_address_tv"
             android:layout_width="60dip"
             android:layout_height="wrap_content"
@@ -119,7 +129,9 @@
             android:text="详细地址"
             android:textColor="@color/lightgray" />
 
-        <EditText  android:textColorHint="@color/hint_textview" android:textSize="14sp" 
+        <EditText
+            android:textColorHint="@color/hint_textview"
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_address_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -135,9 +147,10 @@
     <LinearLayout
         style="@style/layout_mW_44H_style"
         android:orientation="horizontal"
-        android:paddingLeft="10dip" >
+        android:paddingLeft="10dip">
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_postalcode_tv"
             android:layout_width="60dip"
             android:layout_height="wrap_content"
@@ -145,7 +158,9 @@
             android:text="邮政编码"
             android:textColor="@color/lightgray" />
 
-        <EditText  android:textColorHint="@color/hint_textview" android:textSize="14sp" 
+        <EditText
+            android:textColorHint="@color/hint_textview"
+            android:textSize="14sp"
             android:id="@+id/minereceiptaddress_postalcode_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

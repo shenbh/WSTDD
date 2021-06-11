@@ -1,18 +1,19 @@
 package com.newland.wstdd.login.beanresponse;
+
 /**
  * 图片上传后返回的结果
- * @author Administrator
  *
+ * @author Administrator
  */
 public class PhotoRes {
-	private String [] fileUrls;//服务器返回的图片的url
+    private String[] fileUrls;//服务器返回的图片的url
 
-	public String[] getFileUrls() {
-		return fileUrls;
-	}
+    public String[] getFileUrls() {
+        return fileUrls;
+    }
 
-	public void setFileUrls(String[] fileUrls) {
-		this.fileUrls = fileUrls;
-	}
-	
+    public void setFileUrls(String[] fileUrls) {
+        this.fileUrls = fileUrls;
+    }
+
 }

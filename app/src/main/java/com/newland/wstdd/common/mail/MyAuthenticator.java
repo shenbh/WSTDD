@@ -7,28 +7,28 @@ public class
 
 MyAuthenticator extends Authenticator {
 
-	String userName = null;
+    String userName = null;
 
-	String password = null;
+    String password = null;
 
-	public MyAuthenticator() {
+    public MyAuthenticator() {
 
-	}
+    }
 
-	public MyAuthenticator(String username, String password) {
+    public MyAuthenticator(String username, String password) {
 
-		this.userName = username;
+        this.userName = username;
 
-		this.password = password;
+        this.password = password;
 
-	}
+    }
 
-	protected PasswordAuthentication getPasswordAuthentication() {
+    protected PasswordAuthentication getPasswordAuthentication() {
 
-		return new
+        return new
 
-		PasswordAuthentication(userName, password);
+                PasswordAuthentication(userName, password);
 
-	}
+    }
 
 }

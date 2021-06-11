@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/layout_mm_style"
         android:gravity="center"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/title"
@@ -25,7 +25,8 @@
             android:visibility="visible" />
 
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/number"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -46,7 +47,7 @@
             android:layout_gravity="bottom"
             android:layout_marginTop="5dp"
             android:gravity="center"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/positiveButton"

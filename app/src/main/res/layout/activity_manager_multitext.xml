@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 群发消息 -->
 
@@ -11,33 +11,34 @@
 
     <RelativeLayout
         style="@style/layout_mW_40H_style"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/manager_multitext_allchoice_ll" 
+            android:id="@+id/manager_multitext_allchoice_ll"
             style="@style/layout_ww_style"
-			android:orientation="horizontal"            
-            >
-        <CheckBox
-            android:id="@+id/checkBox"
-            style="@style/MyApplyListCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dip"
-            android:checked="false"
-            android:clickable="false"
-            android:focusable="false"
-            android:focusableInTouchMode="false" />
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/allchose_tv"
-            style="@style/layout_wm_style"
-            android:layout_toRightOf="@+id/checkBox"
-            android:text="全选"
-            android:gravity="center_vertical"
-            android:textColor="@color/text_red"
-            android:textSize="15sp" />
-</LinearLayout>
+            <CheckBox
+                android:id="@+id/checkBox"
+                style="@style/MyApplyListCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dip"
+                android:checked="false"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:id="@+id/allchose_tv"
+                style="@style/layout_wm_style"
+                android:layout_toRightOf="@+id/checkBox"
+                android:text="全选"
+                android:gravity="center_vertical"
+                android:textColor="@color/text_red"
+                android:textSize="15sp" />
+        </LinearLayout>
+
         <TextView
             android:id="@+id/applylist_tv"
             style="@style/layout_wm_style"
@@ -55,19 +56,18 @@
         android:layout_height="0dip"
         android:layout_weight="1"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             style="@style/layout_mw_style"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <com.newland.wstdd.mine.applyList.BasePassListView
                 android:id="@+id/multitext_listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:divider="@null"
-                android:background="#fff" >
-            </com.newland.wstdd.mine.applyList.BasePassListView>
+                android:background="#fff"></com.newland.wstdd.mine.applyList.BasePassListView>
 
             <include layout="@layout/line_nopadding" />
         </LinearLayout>
@@ -79,12 +79,12 @@
         android:id="@+id/multitext_bottom_ll"
         style="@style/layout_mW_40H_style"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             style="@style/layout_mm_style"
             android:layout_weight="1"
-            android:background="@color/bg_gray" >
+            android:background="@color/bg_gray">
 
             <EditText
                 android:id="@+id/multitext_send_edt"
@@ -94,8 +94,7 @@
                 android:layout_marginTop="2dp"
                 android:background="@drawable/edittext_roundstyle"
                 android:textColorHint="@color/hint_textview"
-                android:textSize="14sp" >
-            </EditText>
+                android:textSize="14sp"></EditText>
         </LinearLayout>
 
         <TextView

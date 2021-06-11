@@ -11,33 +11,33 @@ import android.widget.ListView;
 import com.newland.wstdd.R;
 
 public class ResizeListView extends ListView {
-	private Context context;
+    private Context context;
 
-	public ResizeListView(Context context) {
-		super(context);
-		this.context = context;
-	}
+    public ResizeListView(Context context) {
+        super(context);
+        this.context = context;
+    }
 
-	public ResizeListView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		this.context = context;
-	}
+    public ResizeListView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        this.context = context;
+    }
 
-	@Override
-	public boolean dispatchKeyEventPreIme(KeyEvent event) {
-		if (context != null) {
-			InputMethodManager imm = (InputMethodManager) context
-					.getSystemService(Context.INPUT_METHOD_SERVICE);
-			if (imm.isActive() && event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
-				for (int i = 0; i < getChildCount(); i++) {
-					View view = getChildAt(i);
-					EditText editText1 = (EditText) view
-							.findViewById(R.id.registration_item_child_editext);
-					editText1.clearFocus();
-				}
-			}
-		}
-		return super.dispatchKeyEventPreIme(event);
-	}
+    @Override
+    public boolean dispatchKeyEventPreIme(KeyEvent event) {
+        if (context != null) {
+            InputMethodManager imm = (InputMethodManager) context
+                    .getSystemService(Context.INPUT_METHOD_SERVICE);
+            if (imm.isActive() && event.getKeyCode() == KeyEvent.KEYCODE_BACK) {
+                for (int i = 0; i < getChildCount(); i++) {
+                    View view = getChildAt(i);
+                    EditText editText1 = (EditText) view
+                            .findViewById(R.id.registration_item_child_editext);
+                    editText1.clearFocus();
+                }
+            }
+        }
+        return super.dispatchKeyEventPreIme(event);
+    }
 
 }

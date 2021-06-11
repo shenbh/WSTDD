@@ -4,19 +4,19 @@ import com.newland.wstdd.common.bean.TddActivity;
 
 /**
  * 35.	设置是否上团大大热点推荐
- * @author Administrator
  *
+ * @author Administrator
  */
 public class OnTddRecommendRes {
-	private TddActivity tddActivity;
+    private TddActivity tddActivity;
 
-	public TddActivity getTddActivity() {
-		return tddActivity;
-	}
+    public TddActivity getTddActivity() {
+        return tddActivity;
+    }
 
-	public void setTddActivity(TddActivity tddActivity) {
-		this.tddActivity = tddActivity;
-	}
-	
-	
+    public void setTddActivity(TddActivity tddActivity) {
+        this.tddActivity = tddActivity;
+    }
+
+
 }

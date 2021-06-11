@@ -14,13 +14,13 @@ import com.newland.wstdd.common.base.BaseFragment;
 
 /**
  * 为ViewPager添加布局（Fragment），绑定和处理fragments和viewpager之间的逻辑关系
- *
+ * <p>
  * Created with IntelliJ IDEA.
  * Author: wangjie  email:tiantian.china.2@gmail.com
  * Date: 13-10-11
  * Time: 下午3:03
  */
-public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.OnPageChangeListener{
+public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.OnPageChangeListener {
     private List<Fragment> fragments; // 每个Fragment对应一个Page
     private FragmentManager fragmentManager;
     private ViewPager viewPager; // viewPager对象
@@ -28,7 +28,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
 
     private OnExtraPageChangeListener onExtraPageChangeListener; // ViewPager切换页面时的额外功能添加接口
 
-    public FragmentViewPagerAdapter(FragmentManager fragmentManager, ViewPager viewPager , List<Fragment> fragments) {
+    public FragmentViewPagerAdapter(FragmentManager fragmentManager, ViewPager viewPager, List<Fragment> fragments) {
         this.fragments = fragments;
         this.fragmentManager = fragmentManager;
         this.viewPager = viewPager;
@@ -37,15 +37,15 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
     }
 
     /**
-	 * @param supportFragmentManager
-	 * @param listFragments
-	 */
-	public FragmentViewPagerAdapter(FragmentManager fragmentManager, List<BaseFragment> listFragments) {
-		this.fragmentManager = fragmentManager;
-		this.fragments = fragments;
-	}
+     * @param supportFragmentManager
+     * @param listFragments
+     */
+    public FragmentViewPagerAdapter(FragmentManager fragmentManager, List<BaseFragment> listFragments) {
+        this.fragmentManager = fragmentManager;
+        this.fragments = fragments;
+    }
 
-	@Override
+    @Override
     public int getCount() {
         return fragments.size();
     }
@@ -63,7 +63,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
         Fragment fragment = fragments.get(position);
-        if(!fragment.isAdded()){ // 如果fragment还没有added
+        if (!fragment.isAdded()) { // 如果fragment还没有added
             FragmentTransaction ft = fragmentManager.beginTransaction();
             ft.add(fragment, fragment.getClass().getSimpleName());
             ft.commit();
@@ -76,7 +76,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
             fragmentManager.executePendingTransactions();
         }
 
-        if(fragment.getView().getParent() == null){
+        if (fragment.getView().getParent() == null) {
             container.addView(fragment.getView()); // 为viewpager增加布局
         }
 
@@ -85,6 +85,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
 
     /**
      * 当前page索引（切换之前）
+     *
      * @return
      */
     public int getCurrentPageIndex() {
@@ -97,6 +98,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
 
     /**
      * 设置页面切换额外功能监听器
+     *
      * @param onExtraPageChangeListener
      */
     public void setOnExtraPageChangeListener(OnExtraPageChangeListener onExtraPageChangeListener) {
@@ -105,7 +107,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
 
     @Override
     public void onPageScrolled(int i, float v, int i2) {
-        if(null != onExtraPageChangeListener){ // 如果设置了额外功能接口
+        if (null != onExtraPageChangeListener) { // 如果设置了额外功能接口
             onExtraPageChangeListener.onExtraPageScrolled(i, v, i2);
         }
     }
@@ -114,13 +116,13 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
     public void onPageSelected(int i) {
         fragments.get(currentPageIndex).onPause(); // 调用切换前Fargment的onPause()
 //        fragments.get(currentPageIndex).onStop(); // 调用切换前Fargment的onStop()
-        if(fragments.get(i).isAdded()){
+        if (fragments.get(i).isAdded()) {
 //            fragments.get(i).onStart(); // 调用切换后Fargment的onStart()
             fragments.get(i).onResume(); // 调用切换后Fargment的onResume()
         }
         currentPageIndex = i;
 
-        if(null != onExtraPageChangeListener){ // 如果设置了额外功能接口
+        if (null != onExtraPageChangeListener) { // 如果设置了额外功能接口
             onExtraPageChangeListener.onExtraPageSelected(i);
         }
 
@@ -128,7 +130,7 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
 
     @Override
     public void onPageScrollStateChanged(int i) {
-        if(null != onExtraPageChangeListener){ // 如果设置了额外功能接口
+        if (null != onExtraPageChangeListener) { // 如果设置了额外功能接口
             onExtraPageChangeListener.onExtraPageScrollStateChanged(i);
         }
     }
@@ -137,10 +139,15 @@ public class FragmentViewPagerAdapter extends PagerAdapter implements ViewPager.
     /**
      * page切换额外功能接口
      */
-    public static class OnExtraPageChangeListener{
-        public void onExtraPageScrolled(int i, float v, int i2){}
-        public void onExtraPageSelected(int i){}
-        public void onExtraPageScrollStateChanged(int i){}
+    public static class OnExtraPageChangeListener {
+        public void onExtraPageScrolled(int i, float v, int i2) {
+        }
+
+        public void onExtraPageSelected(int i) {
+        }
+
+        public void onExtraPageScrollStateChanged(int i) {
+        }
     }
 
 

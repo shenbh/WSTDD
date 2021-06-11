@@ -5,12 +5,12 @@
     android:layout_height="fill_parent"
     android:background="@android:color/white"
     android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/top_title"
         style="@style/layout_mw_style"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/activity_select_interest_close"
@@ -20,12 +20,14 @@
             android:padding="10dip"
             android:src="@drawable/left_expandsion" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/layout_mw_style"
             android:gravity="center_horizontal"
             android:text="感兴趣的活动类型" />
 
-        <TextView android:textSize="14sp"
+        <TextView
+            android:textSize="14sp"
             style="@style/layout_mw_style"
             android:layout_gravity="center"
             android:gravity="center"
@@ -40,12 +42,12 @@
 
         <ScrollView
             style="@style/layout_mw_style"
-            android:scrollbars="none" >
+            android:scrollbars="none">
 
             <LinearLayout
                 style="@style/layout_mw_style"
                 android:background="@color/white"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <com.newland.wstdd.common.listview.DefineListViews
                     android:id="@+id/all_interest_interest"
@@ -55,8 +57,7 @@
                     android:gravity="center"
                     android:listSelector="@android:color/transparent"
                     android:numColumns="4"
-                    android:scrollbars="none" >
-                </com.newland.wstdd.common.listview.DefineListViews>
+                    android:scrollbars="none"></com.newland.wstdd.common.listview.DefineListViews>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

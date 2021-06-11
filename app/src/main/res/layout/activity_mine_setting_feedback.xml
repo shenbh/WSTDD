@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 意见反馈 -->
 
@@ -13,9 +13,10 @@
     <LinearLayout
         style="@style/layout_mw_style"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/activity_mine_setting_feedback_content_edt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,7 +65,7 @@
         android:paddingBottom="10dp"
         android:paddingLeft="18dp"
         android:paddingTop="10dp"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <com.newland.wstdd.originate.origateactivity.OriginateCharirGridView
             android:id="@+id/selected_images_gridv"
@@ -73,8 +74,7 @@
             android:horizontalSpacing="8dp"
             android:numColumns="4"
             android:scrollbars="none"
-            android:verticalSpacing="10dp" >
-        </com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
+            android:verticalSpacing="10dp"></com.newland.wstdd.originate.origateactivity.OriginateCharirGridView>
     </ScrollView>
 
     <include layout="@layout/line_nopadding" />
@@ -90,7 +90,8 @@
 
     <include layout="@layout/line_nopadding" />
 
-    <EditText  android:textColorHint="@color/hint_textview"
+    <EditText
+        android:textColorHint="@color/hint_textview"
         android:id="@+id/activity_mine_setting_feedback_phone_edt"
         style="@style/layout_mw_style"
         android:background="@color/white"

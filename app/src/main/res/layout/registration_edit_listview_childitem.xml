@@ -5,12 +5,12 @@
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
     android:baselineAligned="false"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/layout_mw_style"
         android:background="@color/bg_gray"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/activity_mine_personalcenter_nickname_ll"
@@ -19,7 +19,7 @@
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingLeft="20dip" >
+            android:paddingLeft="20dip">
 
             <TextView
                 android:id="@+id/registration_item_child_textview"
@@ -31,7 +31,8 @@
                 android:textColor="#cccccc"
                 android:textSize="15sp" />
 
-            <EditText  android:textColorHint="@color/hint_textview"
+            <EditText
+                android:textColorHint="@color/hint_textview"
                 android:id="@+id/registration_item_child_editext"
                 style="@style/layout_mW_44H_style"
                 android:layout_gravity="center_vertical"

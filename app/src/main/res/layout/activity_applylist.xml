@@ -1,15 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 报名名单 -->
 
-    <FrameLayout style="@style/layout_mw_style" >
+    <FrameLayout style="@style/layout_mw_style">
 
         <LinearLayout
             style="@style/layout_mm_style"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <include layout="@layout/head" />
 
@@ -17,7 +17,7 @@
                 android:id="@+id/hor_lin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:id="@+id/pass_ll"
@@ -25,7 +25,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@color/transparent"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/pass_tv"
@@ -55,7 +55,7 @@
                     android:background="@color/transparent"
                     android:orientation="vertical"
                     android:paddingLeft="20dp"
-                    android:paddingRight="0dp" >
+                    android:paddingRight="0dp">
 
                     <TextView
                         android:id="@+id/nopass_tv"
@@ -91,7 +91,7 @@
         android:id="@+id/applylist_bottom_ll"
         style="@style/layout_mW_40H_style"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/applist_online_tv"

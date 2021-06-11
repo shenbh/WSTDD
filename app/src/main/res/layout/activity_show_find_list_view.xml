@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/login_layout"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/regist_finish_title"
@@ -16,15 +16,13 @@
 
     <ScrollView
         style="@style/layout_mm_style"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <com.newland.wstdd.common.view.CustomListViews
             android:id="@+id/category_listview"
             style="@style/layout_mw_style"
             android:layout_marginLeft="15dip"
-            android:layout_marginRight="15dip"
-            >
-        </com.newland.wstdd.common.view.CustomListViews>
+            android:layout_marginRight="15dip"></com.newland.wstdd.common.view.CustomListViews>
     </ScrollView>
 
 </LinearLayout>

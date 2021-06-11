@@ -9,27 +9,28 @@ import com.newland.wstdd.originate.origateactivity.beanresponse.SingleActivityPu
 import com.newland.wstdd.originate.search.OriginateSearchActivity;
 
 public class SingleActivityPublishHandle extends Handler {
-	public static final int SINGLE_ACTIVITY_PUBLISH = 0;//第一次注册请求
-	private OriginateChairActivity context;
-	public SingleActivityPublishHandle(OriginateChairActivity context) {
-		this.context = context;
-	}
+    public static final int SINGLE_ACTIVITY_PUBLISH = 0;//第一次注册请求
+    private OriginateChairActivity context;
 
-	@SuppressWarnings("static-access")
-	public void handleMessage(Message msg) {
-		switch (msg.what) {
-		case SINGLE_ACTIVITY_PUBLISH:
-			// 只有当msg.obj对象为空，表示访问服务器成功
-			if (msg.obj != null) {
-				if (msg.obj instanceof String) {
-					context.OnFailResultListener((String)msg.obj);
-				} else if (msg.obj instanceof SingleActivityPublishRes) {
-					context.OnHandleResultListener(msg.obj, SINGLE_ACTIVITY_PUBLISH);
-				}
-			}
-			break;
-		}
-		super.handleMessage(msg);
-	}
+    public SingleActivityPublishHandle(OriginateChairActivity context) {
+        this.context = context;
+    }
+
+    @SuppressWarnings("static-access")
+    public void handleMessage(Message msg) {
+        switch (msg.what) {
+            case SINGLE_ACTIVITY_PUBLISH:
+                // 只有当msg.obj对象为空，表示访问服务器成功
+                if (msg.obj != null) {
+                    if (msg.obj instanceof String) {
+                        context.OnFailResultListener((String) msg.obj);
+                    } else if (msg.obj instanceof SingleActivityPublishRes) {
+                        context.OnHandleResultListener(msg.obj, SINGLE_ACTIVITY_PUBLISH);
+                    }
+                }
+                break;
+        }
+        super.handleMessage(msg);
+    }
 
 }

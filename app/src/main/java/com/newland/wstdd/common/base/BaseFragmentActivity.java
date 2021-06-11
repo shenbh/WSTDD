@@ -18,184 +18,177 @@ import com.newland.wstdd.common.dialog.CustomProgressDialog;
 import com.newland.wstdd.common.view.LoadingDialog;
 
 public abstract class BaseFragmentActivity extends FragmentActivity implements
-		OnClickListener {
-	private MainFrameTask mMainFrameTask = null;
-	protected CustomProgressDialog progressDialog = null;
+        OnClickListener {
+    private MainFrameTask mMainFrameTask = null;
+    protected CustomProgressDialog progressDialog = null;
 
-	
-	
-	
-	protected abstract void processMessage(Message msg);
 
-	private Handler handler = new Handler() {
-		@Override
-		public void handleMessage(Message msg) {
-			processMessage(msg);
-		}
-	};
+    protected abstract void processMessage(Message msg);
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		   requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题
-			AppManager.getAppManager().addActivity(this);//添加这个Activity到相应的栈中
-			getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);// 保持屏幕常亮
-			  
-	}
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            processMessage(msg);
+        }
+    };
 
-	@Override
-	protected void onDestroy() {
-		stopProgressDialog();
-		
-		if (mMainFrameTask != null && !mMainFrameTask.isCancelled()){
-			mMainFrameTask.cancel(true);
-		}
-		
-		AppManager.getAppManager().finishActivity(this);
-		super.onDestroy();
-	}
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题
+        AppManager.getAppManager().addActivity(this);//添加这个Activity到相应的栈中
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);// 保持屏幕常亮
 
-	protected void handlerException(Exception e) {
-		AppException.getAppException(this).handlerException(e);
-	}
+    }
 
-	public void sendEmptyMessage(int what) {
-		handler.sendEmptyMessage(what);
-	}
+    @Override
+    protected void onDestroy() {
+        stopProgressDialog();
 
-	public void sendEmptyMessageAtTime(int what, long uptimeMillis) {
-		handler.sendEmptyMessageAtTime(what, uptimeMillis);
-	}
+        if (mMainFrameTask != null && !mMainFrameTask.isCancelled()) {
+            mMainFrameTask.cancel(true);
+        }
 
-	public void sendEmptyMessageDelayed(int what, long delayMillis) {
-		handler.sendEmptyMessageDelayed(what, delayMillis);
-	}
+        AppManager.getAppManager().finishActivity(this);
+        super.onDestroy();
+    }
 
-	public void sendMessage(Message msg) {
-		handler.sendMessage(msg);
-	}
+    protected void handlerException(Exception e) {
+        AppException.getAppException(this).handlerException(e);
+    }
 
-	public void sendMessageAtFrontOfQueue(Message msg) {
-		handler.sendMessageAtFrontOfQueue(msg);
-	}
+    public void sendEmptyMessage(int what) {
+        handler.sendEmptyMessage(what);
+    }
 
-	public void sendMessageAtTime(Message msg, long uptimeMillis) {
-		handler.sendMessageAtTime(msg, uptimeMillis);
-	}
+    public void sendEmptyMessageAtTime(int what, long uptimeMillis) {
+        handler.sendEmptyMessageAtTime(what, uptimeMillis);
+    }
 
-	public void sendMessageDelayed(Message msg, long delayMillis) {
-		handler.sendMessageDelayed(msg, delayMillis);
-	}
-	
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		switch (v.getId()) {
-		case R.id.head_left_iv:
-			finish();
-			break;
+    public void sendEmptyMessageDelayed(int what, long delayMillis) {
+        handler.sendEmptyMessageDelayed(what, delayMillis);
+    }
 
-		default:
-			break;
-		}
-		
-	}
-	
-	public LoadingDialog dialog;//加载对话框
-	
-	public void refresh(){
-		if (dialog == null) {
-			initDialog(this);
-		}else {
-			dialog.dismiss();
-			initDialog(this);
-		}
-	}
-	public void refreshDialog(){
-		 mMainFrameTask = new MainFrameTask(this);
-	     mMainFrameTask.execute();
-	}
-	
-	public void initDialog(Context context) {
-		dialog = new LoadingDialog(context);
+    public void sendMessage(Message msg) {
+        handler.sendMessage(msg);
+    }
+
+    public void sendMessageAtFrontOfQueue(Message msg) {
+        handler.sendMessageAtFrontOfQueue(msg);
+    }
+
+    public void sendMessageAtTime(Message msg, long uptimeMillis) {
+        handler.sendMessageAtTime(msg, uptimeMillis);
+    }
+
+    public void sendMessageDelayed(Message msg, long delayMillis) {
+        handler.sendMessageDelayed(msg, delayMillis);
+    }
+
+    @Override
+    public void onClick(View v) {
+        // TODO Auto-generated method stub
+        switch (v.getId()) {
+            case R.id.head_left_iv:
+                finish();
+                break;
+
+            default:
+                break;
+        }
+
+    }
+
+    public LoadingDialog dialog;//加载对话框
+
+    public void refresh() {
+        if (dialog == null) {
+            initDialog(this);
+        } else {
+            dialog.dismiss();
+            initDialog(this);
+        }
+    }
+
+    public void refreshDialog() {
+        mMainFrameTask = new MainFrameTask(this);
+        mMainFrameTask.execute();
+    }
+
+    public void initDialog(Context context) {
+        dialog = new LoadingDialog(context);
 //		dialog.setTvMessage("正在加载...");
-		if (!isFinishing()) {
-			dialog.show(true);
-		}else {
-			dialog.show(false);
-		}
-	}
-	
-	public abstract void initView();
+        if (!isFinishing()) {
+            dialog.show(true);
+        } else {
+            dialog.show(false);
+        }
+    }
 
-	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-	}
-	
-	
-	
+    public abstract void initView();
 
-	private void startProgressDialog(){
-		if (progressDialog == null){
-			progressDialog = CustomProgressDialog.createDialog(this);
+    @Override
+    protected void onResume() {
+        // TODO Auto-generated method stub
+        super.onResume();
+    }
+
+
+    private void startProgressDialog() {
+        if (progressDialog == null) {
+            progressDialog = CustomProgressDialog.createDialog(this);
 //	    	progressDialog.setMessage("正在加载中...");
-		}
-		
-    	progressDialog.show();
-	}
-	
-	private void stopProgressDialog(){
-		if (progressDialog != null){
-			progressDialog.dismiss();
-			progressDialog = null;
-		}
-	}
-	
-	public class MainFrameTask extends AsyncTask<Integer, String, Integer>{
-		private BaseFragmentActivity BaseFragmentActivity = null;
-		
-		public MainFrameTask(BaseFragmentActivity BaseFragmentActivity){
-			this.BaseFragmentActivity = BaseFragmentActivity;
-		}
-		
-		@Override
-		protected void onCancelled() {
-			stopProgressDialog();
-			super.onCancelled();
-		}
+        }
 
-		@Override
-		protected Integer doInBackground(Integer... params) {
-			
-			try {
-				if (progressDialog != null) {
-					while(progressDialog.isContinueDialog()){
-						Thread.sleep(1000);//睡一秒
-					}
-				}
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			return null;
-		}
-			
-		
+        progressDialog.show();
+    }
 
-		@Override
-		protected void onPreExecute() {
-			startProgressDialog();
-		}
+    private void stopProgressDialog() {
+        if (progressDialog != null) {
+            progressDialog.dismiss();
+            progressDialog = null;
+        }
+    }
 
-		@Override
-		protected void onPostExecute(Integer result) {
-			stopProgressDialog();
-		}	
-	}
+    public class MainFrameTask extends AsyncTask<Integer, String, Integer> {
+        private BaseFragmentActivity BaseFragmentActivity = null;
 
-	
-	
-	
-	
+        public MainFrameTask(BaseFragmentActivity BaseFragmentActivity) {
+            this.BaseFragmentActivity = BaseFragmentActivity;
+        }
+
+        @Override
+        protected void onCancelled() {
+            stopProgressDialog();
+            super.onCancelled();
+        }
+
+        @Override
+        protected Integer doInBackground(Integer... params) {
+
+            try {
+                if (progressDialog != null) {
+                    while (progressDialog.isContinueDialog()) {
+                        Thread.sleep(1000);//睡一秒
+                    }
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+
+        @Override
+        protected void onPreExecute() {
+            startProgressDialog();
+        }
+
+        @Override
+        protected void onPostExecute(Integer result) {
+            stopProgressDialog();
+        }
+    }
+
+
 }

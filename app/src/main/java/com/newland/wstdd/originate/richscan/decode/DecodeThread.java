@@ -9,39 +9,39 @@ import com.newland.wstdd.originate.richscan.RichScanActivity;
 
 /**
  * 作者: 陈涛(1076559197@qq.com)
- * 
+ * <p>
  * 时间: 2014年5月9日 下午12:24:34
- *
+ * <p>
  * 版本: V_1.0.0
- *
+ * <p>
  * 描述: 解码线程
  */
 final class DecodeThread extends Thread {
 
-	RichScanActivity activity;
-	private Handler handler;
-	private final CountDownLatch handlerInitLatch;
+    RichScanActivity activity;
+    private Handler handler;
+    private final CountDownLatch handlerInitLatch;
 
-	DecodeThread(RichScanActivity activity) {
-		this.activity = activity;
-		handlerInitLatch = new CountDownLatch(1);
-	}
+    DecodeThread(RichScanActivity activity) {
+        this.activity = activity;
+        handlerInitLatch = new CountDownLatch(1);
+    }
 
-	Handler getHandler() {
-		try {
-			handlerInitLatch.await();
-		} catch (InterruptedException ie) {
-			// continue?
-		}
-		return handler;
-	}
+    Handler getHandler() {
+        try {
+            handlerInitLatch.await();
+        } catch (InterruptedException ie) {
+            // continue?
+        }
+        return handler;
+    }
 
-	@Override
-	public void run() {
-		Looper.prepare();
-		handler = new DecodeHandler(activity);
-		handlerInitLatch.countDown();
-		Looper.loop();
-	}
+    @Override
+    public void run() {
+        Looper.prepare();
+        handler = new DecodeHandler(activity);
+        handlerInitLatch.countDown();
+        Looper.loop();
+    }
 
 }

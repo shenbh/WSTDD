@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:orientation="horizontal" >
+    android:orientation="horizontal">
 
     <LinearLayout
         android:id="@+id/ll"
@@ -13,11 +13,11 @@
         android:paddingBottom="10dp"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <FrameLayout
             style="@style/layout_mm_style"
-            android:layout_weight="2" >
+            android:layout_weight="2">
 
             <ImageView
                 android:id="@+id/find_hot_logo"
@@ -41,7 +41,7 @@
         <LinearLayout
             style="@style/layout_mm_style"
             android:layout_weight="1"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/find_hot_title"
@@ -55,8 +55,7 @@
                 android:singleLine="true"
                 android:text="融资中国2015互联网金融峰会"
                 android:textColor="@color/textgray"
-                android:textSize="15sp"
-                />
+                android:textSize="15sp" />
 
             <TextView
                 android:id="@+id/find_hot_time"
@@ -90,7 +89,7 @@
 
             <RelativeLayout
                 style="@style/layout_mw_style"
-                android:layout_weight="1" >
+                android:layout_weight="1">
 
                 <TextView
                     android:id="@+id/find_hot_people"
@@ -111,7 +110,7 @@
                     android:id="@+id/linearLayout1"
                     style="@style/layout_ww_style"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true" >
+                    android:layout_centerVertical="true">
 
                     <ImageView
                         android:id="@+id/find_hot_ischarge"
@@ -119,6 +118,7 @@
                         android:layout_height="20dip"
                         android:visibility="invisible"
                         android:text="收费" />
+
                     <TextView
                         android:id="@+id/find_hot_signstate"
                         style="@style/layout_wW_20H_style"

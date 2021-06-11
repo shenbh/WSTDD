@@ -98,57 +98,104 @@ import com.test.DeleteUserInfoRes;
 
 /**
  * 定义一个接口    各个请求功能的操作
- * @author Administrator
  *
+ * @author Administrator
  */
 public interface BaseMessageMgr {
 
-	RetMsg<DeleteUserInfoRes> getCancelUserInfo(DeleteUserInfoReq deleteUserInfoReq);//0注销账户    用作测试时候用的
-	RetMsg<LoginRes> getLoginInfo(LoginReq reqLoginInfo);//1获取登录操作
-	RetMsg<ThirdLoginRes> getThirdLoginInfo(ThirdLoginReq thirdLoginReq);//2第三方请求
-	RetMsg<RegistFirstRes> getRegistInfo(RegistFirstReq registFirstReq,String sessionId);//3获取第一步的注册操作
-	RetMsg<LoginBindRes> getReqLoginBindInfo(LoginBindReq loginBindReq);//4绑定请求的操作
-	RetMsg<RemoveBindRes> getRemoveBindInfo(RemoveBindReq removeBindReq);//4.4解除绑定请求的操作
-	RetMsg<BindRes> getBindInfo(BindReq bindReq);//4.4解除绑定请求的操作
-	RetMsg<CheckCodeRes> getCheckCodeIndo(CheckCodeReq checkCodeReq);//5获取短信验证码
-	RetMsg<RegistSecondRes> getRegistFinishInfo(RegistSecondReq registSecondReq, String userIdString);//6获取第二步的注册操作
-	RetMsg<MyInterestTagsRes> getMyInterestInfo(MyInterestTagsReq myInterestTagsReq);//7我的个人兴趣标签
-	RetMsg<MyInterestTagsRes> getMyInterestUpdateInfo(MyInterestTagsReq myInterestTagsReq);//7我的个人兴趣标签
-	RetMsg<FindRes> getFindInfo(FindReq findReq);//8发现页的相关信息
-	RetMsg<OriginateSearchRes> getOriginateSearchInfo(OriginateSearchReq originateSearchReq);//9首页的搜索功能
-	RetMsg<VersionRes> getVersionInfo(VersionReq versionReq);//10获取版本信息
-	RetMsg<MinePersonInfoGetRes> getMinePersonInfoGetInfoMsg(MinePersonInfoGetReq minePersonInfoGetReq);//11获取个人信息
-	RetMsg<MineEditPersonRes> getMineEditPersonInfo(MineEditPersonReq mineEditPersonReq);//12编辑个人信息
-	RetMsg<MineAddAddressRes> getMineReceiptAddressInfo(MineAddAddressReq mineAddAddressReq);//13获取收获地址
-	RetMsg<MineAddAddressRes> getMineUpdateAddressInfo(MineAddAddressReq mineAddAddressReq,String addressIdString);//更新收获地址
-	RetMsg<MineDefaultAddressRes> getMineDefaultAddressInfo(MineDefaultAddressReq mineDefaultAddressReq);//14设置默认的收获地址
-	RetMsg<MineDeleteAddressRes> getMineDeleteAddressInfo(MineDeleteAddressReq mineDeleteAddressReq,String addressIdString);//15删除地址的操作  
-	RetMsg<FindHotRes> getFindHotListInfo(FindHotReq findHotReq);//16热门活动列表
-	RetMsg<FindRecommendRes> getFindRecommendListInfo(FindRecommendReq findRecommendReq);//17推荐活动列表
-	RetMsg<SingleActivityRes> getSingleActivityInfo(SingleActivityReq singleActivityReq);//18单个活动
-	RetMsg<SingleActivityPublishRes> getSingleActivityPublishInfo(SingleActivityPublishReq singleActivityPublishReq, String activityAction, String activityId);//19单个活动发布
-	RetMsg<FindCategoryRes> getFindCategoeyInfo(FindCategoryReq findCategoryReq);//20发现类别获取列表
-	RetMsg<SubmitRegistrationRes> getSubmitRegistrationInfo(SubmitRegistrationReq submitRegistrationReq, String string);//21提交报名信息
-	RetMsg<CancelRegistrationRes> getCancelRegistrationInfo(CancelRegistrationReq cancelRegistrationReq);//22取消报名
-	RetMsg<RegistrationListRes> getRegistrationListInfo(RegistrationListReq registrationListReq);//23获取报名人员列表
-	RetMsg<UpdateRegistrationListRes> getUpdateRegistrationListInfo(UpdateRegistrationListReq updateRegistrationListReq);//24获取报名人员列表
-	RetMsg<OpenActivityPeoplesRes> getOpenActivityPeoplesInfo(OpenActivityPeoplesReq openActivityPeoplesReq, String string);//25是否公开活动报名人数
-	RetMsg<OnTddRecommendRes> getOnTddRecommendInfo(OnTddRecommendReq onTddRecommendReq, String string);//26是否上团大大热搜
-	RetMsg<RegistrationStateRes> getRegistrationStateInfo(RegistrationStateReq registrationStateReq, String string);//27是否需要审核报名
-	RetMsg<RegistrationCheckRes> getRegistrationCheckInfo(RegistrationCheckReq registrationCheckReq, String string);//28更改报名状态
-	RetMsg<IsLikeAndCollectRes> getIsLikeAndCollectInfo(IsLikeAndCollectReq likeAndCollectReq);//29活动是否点赞收藏
-	RetMsg<CollectRes> getCollectInfo(CollectReq collectReq);//30收藏
-	RetMsg<LikeRes> getLikeInfo(LikeReq likeReq);//31点赞
-	RetMsg<MyActivityListRes> getMyActivityListInfo(MyActivityListReq myActivityListReq);//获取我发起 、参加 、收藏的活动
-	RetMsg<TwoCodePayRes> getTwoCodePayInfo(TwoCodePayReq twoCodePayReq,String string);
-	RetMsg<SafeRes> getSafeInfo(SafeReq safeReq,String string);//修改密码
-	RetMsg<FeedBackRes> getFeedBackInfo(FeedBackReq feedBackReq);//意见反馈
-	RetMsg<OriginateFragmentRes> getOriginateFragmentInfo(OriginateFragmentReq originateFragmentReq);//发起界面相关数据的获取
-	RetMsg<MailUrlRes> getMailUrlInfo(MailUrlReq mailUrlReq,String id);//发送邮箱地址给服务器导出名单
-	RetMsg<SendMessageRes> getMultiTextInfo(SendMessageReq sendMessageReq,String id);//群发消息
-	RetMsg<GetEditRegistrationRes> getEditRegistrationInfo(GetEditRegistrationReq getEditRegistrationReq);//获取编辑报名信息
-	RetMsg<SubmitRegistrationRes> getOkEditRegistrationInfo(SubmitRegistrationReq submitRegistrationReq, String string);//提交报名信息
-	RetMsg<LikeListRes> getLikeListInfo(LikeListReq likeListReq);//获取点赞列表
-	RetMsg<DeleteActivityRes> getDeleteActivityInfo(DeleteActivityReq deleteActivityReq, String string);//删除活动的请求
-	RetMsg<ModifyCoverRes> getModifyCoverInfo(ModifyCoverReq modifyCoverReq);//更改封面
+    RetMsg<DeleteUserInfoRes> getCancelUserInfo(DeleteUserInfoReq deleteUserInfoReq);//0注销账户    用作测试时候用的
+
+    RetMsg<LoginRes> getLoginInfo(LoginReq reqLoginInfo);//1获取登录操作
+
+    RetMsg<ThirdLoginRes> getThirdLoginInfo(ThirdLoginReq thirdLoginReq);//2第三方请求
+
+    RetMsg<RegistFirstRes> getRegistInfo(RegistFirstReq registFirstReq, String sessionId);//3获取第一步的注册操作
+
+    RetMsg<LoginBindRes> getReqLoginBindInfo(LoginBindReq loginBindReq);//4绑定请求的操作
+
+    RetMsg<RemoveBindRes> getRemoveBindInfo(RemoveBindReq removeBindReq);//4.4解除绑定请求的操作
+
+    RetMsg<BindRes> getBindInfo(BindReq bindReq);//4.4解除绑定请求的操作
+
+    RetMsg<CheckCodeRes> getCheckCodeIndo(CheckCodeReq checkCodeReq);//5获取短信验证码
+
+    RetMsg<RegistSecondRes> getRegistFinishInfo(RegistSecondReq registSecondReq, String userIdString);//6获取第二步的注册操作
+
+    RetMsg<MyInterestTagsRes> getMyInterestInfo(MyInterestTagsReq myInterestTagsReq);//7我的个人兴趣标签
+
+    RetMsg<MyInterestTagsRes> getMyInterestUpdateInfo(MyInterestTagsReq myInterestTagsReq);//7我的个人兴趣标签
+
+    RetMsg<FindRes> getFindInfo(FindReq findReq);//8发现页的相关信息
+
+    RetMsg<OriginateSearchRes> getOriginateSearchInfo(OriginateSearchReq originateSearchReq);//9首页的搜索功能
+
+    RetMsg<VersionRes> getVersionInfo(VersionReq versionReq);//10获取版本信息
+
+    RetMsg<MinePersonInfoGetRes> getMinePersonInfoGetInfoMsg(MinePersonInfoGetReq minePersonInfoGetReq);//11获取个人信息
+
+    RetMsg<MineEditPersonRes> getMineEditPersonInfo(MineEditPersonReq mineEditPersonReq);//12编辑个人信息
+
+    RetMsg<MineAddAddressRes> getMineReceiptAddressInfo(MineAddAddressReq mineAddAddressReq);//13获取收获地址
+
+    RetMsg<MineAddAddressRes> getMineUpdateAddressInfo(MineAddAddressReq mineAddAddressReq, String addressIdString);//更新收获地址
+
+    RetMsg<MineDefaultAddressRes> getMineDefaultAddressInfo(MineDefaultAddressReq mineDefaultAddressReq);//14设置默认的收获地址
+
+    RetMsg<MineDeleteAddressRes> getMineDeleteAddressInfo(MineDeleteAddressReq mineDeleteAddressReq, String addressIdString);//15删除地址的操作
+
+    RetMsg<FindHotRes> getFindHotListInfo(FindHotReq findHotReq);//16热门活动列表
+
+    RetMsg<FindRecommendRes> getFindRecommendListInfo(FindRecommendReq findRecommendReq);//17推荐活动列表
+
+    RetMsg<SingleActivityRes> getSingleActivityInfo(SingleActivityReq singleActivityReq);//18单个活动
+
+    RetMsg<SingleActivityPublishRes> getSingleActivityPublishInfo(SingleActivityPublishReq singleActivityPublishReq, String activityAction, String activityId);//19单个活动发布
+
+    RetMsg<FindCategoryRes> getFindCategoeyInfo(FindCategoryReq findCategoryReq);//20发现类别获取列表
+
+    RetMsg<SubmitRegistrationRes> getSubmitRegistrationInfo(SubmitRegistrationReq submitRegistrationReq, String string);//21提交报名信息
+
+    RetMsg<CancelRegistrationRes> getCancelRegistrationInfo(CancelRegistrationReq cancelRegistrationReq);//22取消报名
+
+    RetMsg<RegistrationListRes> getRegistrationListInfo(RegistrationListReq registrationListReq);//23获取报名人员列表
+
+    RetMsg<UpdateRegistrationListRes> getUpdateRegistrationListInfo(UpdateRegistrationListReq updateRegistrationListReq);//24获取报名人员列表
+
+    RetMsg<OpenActivityPeoplesRes> getOpenActivityPeoplesInfo(OpenActivityPeoplesReq openActivityPeoplesReq, String string);//25是否公开活动报名人数
+
+    RetMsg<OnTddRecommendRes> getOnTddRecommendInfo(OnTddRecommendReq onTddRecommendReq, String string);//26是否上团大大热搜
+
+    RetMsg<RegistrationStateRes> getRegistrationStateInfo(RegistrationStateReq registrationStateReq, String string);//27是否需要审核报名
+
+    RetMsg<RegistrationCheckRes> getRegistrationCheckInfo(RegistrationCheckReq registrationCheckReq, String string);//28更改报名状态
+
+    RetMsg<IsLikeAndCollectRes> getIsLikeAndCollectInfo(IsLikeAndCollectReq likeAndCollectReq);//29活动是否点赞收藏
+
+    RetMsg<CollectRes> getCollectInfo(CollectReq collectReq);//30收藏
+
+    RetMsg<LikeRes> getLikeInfo(LikeReq likeReq);//31点赞
+
+    RetMsg<MyActivityListRes> getMyActivityListInfo(MyActivityListReq myActivityListReq);//获取我发起 、参加 、收藏的活动
+
+    RetMsg<TwoCodePayRes> getTwoCodePayInfo(TwoCodePayReq twoCodePayReq, String string);
+
+    RetMsg<SafeRes> getSafeInfo(SafeReq safeReq, String string);//修改密码
+
+    RetMsg<FeedBackRes> getFeedBackInfo(FeedBackReq feedBackReq);//意见反馈
+
+    RetMsg<OriginateFragmentRes> getOriginateFragmentInfo(OriginateFragmentReq originateFragmentReq);//发起界面相关数据的获取
+
+    RetMsg<MailUrlRes> getMailUrlInfo(MailUrlReq mailUrlReq, String id);//发送邮箱地址给服务器导出名单
+
+    RetMsg<SendMessageRes> getMultiTextInfo(SendMessageReq sendMessageReq, String id);//群发消息
+
+    RetMsg<GetEditRegistrationRes> getEditRegistrationInfo(GetEditRegistrationReq getEditRegistrationReq);//获取编辑报名信息
+
+    RetMsg<SubmitRegistrationRes> getOkEditRegistrationInfo(SubmitRegistrationReq submitRegistrationReq, String string);//提交报名信息
+
+    RetMsg<LikeListRes> getLikeListInfo(LikeListReq likeListReq);//获取点赞列表
+
+    RetMsg<DeleteActivityRes> getDeleteActivityInfo(DeleteActivityReq deleteActivityReq, String string);//删除活动的请求
+
+    RetMsg<ModifyCoverRes> getModifyCoverInfo(ModifyCoverReq modifyCoverReq);//更改封面
 }

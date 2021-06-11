@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_gray"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 账户与安全 -->
 
@@ -20,7 +20,7 @@
         android:layout_height="40dp"
         android:background="@color/white"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="70dp"
@@ -33,7 +33,8 @@
             android:textColor="@color/textgray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/oldpsw_edt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -51,7 +52,7 @@
         android:layout_height="40dp"
         android:background="@color/white"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="70dp"
@@ -64,7 +65,8 @@
             android:textColor="@color/textgray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/newpsw_edt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -82,7 +84,7 @@
         android:layout_height="40dp"
         android:background="@color/white"
         android:gravity="center_vertical"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <TextView
             android:layout_width="70dp"
@@ -95,7 +97,8 @@
             android:textColor="@color/textgray"
             android:textSize="14sp" />
 
-        <EditText  android:textColorHint="@color/hint_textview"
+        <EditText
+            android:textColorHint="@color/hint_textview"
             android:id="@+id/confirmnewpsw_edt"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -22,15 +22,13 @@ import android.util.Log;
 import android.widget.Toast;
 
 /**
- * 
  * @author jiabin
- *
  */
 public class LogCollectorUtility {
-	
-	private static final String TAG = LogCollectorUtility.class.getName();
-	
-	public static boolean isNetworkConnected(Context context) {
+
+    private static final String TAG = LogCollectorUtility.class.getName();
+
+    public static boolean isNetworkConnected(Context context) {
         if (context != null) {
             ConnectivityManager mConnectivityManager = (ConnectivityManager) context
                     .getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -54,104 +52,104 @@ public class LogCollectorUtility {
         }
         return false;
     }
-	
-	
-	/**
-	 * 获取程序外部(sd)的目录
-	 * 
-	 * @param context
-	 * @return
-	 */
-	public static File getExternalDir(Context context , String dirName) {
-		final String cacheDir = "/Android/data/" + context.getPackageName()
-				+ "/";
-		return new File(Environment.getExternalStorageDirectory().getAbsolutePath()
-				+ cacheDir + dirName + "/");
-	}
-	
-	public static boolean isSDcardExsit() {
+
+
+    /**
+     * 获取程序外部(sd)的目录
+     *
+     * @param context
+     * @return
+     */
+    public static File getExternalDir(Context context, String dirName) {
+        final String cacheDir = "/Android/data/" + context.getPackageName()
+                + "/";
+        return new File(Environment.getExternalStorageDirectory().getAbsolutePath()
+                + cacheDir + dirName + "/");
+    }
+
+    public static boolean isSDcardExsit() {
         String state = Environment.getExternalStorageState();
         if (Environment.MEDIA_MOUNTED.equals(state)) {
             return true;
         }
         return false;
     }
-	
-	public static boolean hasPermission(Context context) {
-		if (context != null) {
-			boolean b1 = context
-					.checkCallingOrSelfPermission("android.permission.INTERNET") == 0;// 
-			boolean b2 = context.checkCallingOrSelfPermission("android.permission.READ_PHONE_STATE") == 0;
-			boolean b3 = context.checkCallingOrSelfPermission("android.permission.WRITE_EXTERNAL_STORAGE") == 0;
-			boolean b4 = context.checkCallingOrSelfPermission("android.permission.ACCESS_NETWORK_STATE") == 0;
-			boolean b5 = context.checkCallingOrSelfPermission("android.permission.ACCESS_WIFI_STATE") == 0;
-			
-			if(!b1 || !b2 || !b3 || !b4 || !b5){
-				Log.d(TAG, "没有添加权限");
-				Toast.makeText(context.getApplicationContext(), "没有添加权限", Toast.LENGTH_SHORT).show();
-			}
-			return b1 && b2 && b3 && b4 && b5;
-		}
 
-		return false;
-	}
-	
-	public static String getCurrentTime(){
-		long currentTime = System.currentTimeMillis();
-		Date date = new Date(currentTime);
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
-		String time = sdf.format(date);
-		return time;
-	}
-	
-	public static String getVerName(Context c){
-		PackageManager pm = c.getPackageManager();
-		PackageInfo pi = null;
-		try {
-			pi = pm.getPackageInfo(c.getPackageName(), PackageManager.GET_ACTIVITIES);
-		} catch (NameNotFoundException e) {
-			Log.e(TAG, "Error while collect package info", e);
-			e.printStackTrace();
-			return "error";
-		}
-		if(pi == null){
-			return "error1";
-		}
-		String versionName = pi.versionName;
-		if(versionName == null){
-			return "not set";
-		}
-		return versionName;
-	}
-	
-	public static String getVerCode(Context c){
-		PackageManager pm = c.getPackageManager();
-		PackageInfo pi = null;
-		try {
-			pi = pm.getPackageInfo(c.getPackageName(), PackageManager.GET_ACTIVITIES);
-		} catch (NameNotFoundException e) {
-			Log.e(TAG, "Error while collect package info", e);
-			e.printStackTrace();
-			return "error";
-		}
-		if(pi == null){
-			return "error1";
-		}
-		int versionCode = pi.versionCode;
-		
-		return String.valueOf(versionCode);
-	}
+    public static boolean hasPermission(Context context) {
+        if (context != null) {
+            boolean b1 = context
+                    .checkCallingOrSelfPermission("android.permission.INTERNET") == 0;// 
+            boolean b2 = context.checkCallingOrSelfPermission("android.permission.READ_PHONE_STATE") == 0;
+            boolean b3 = context.checkCallingOrSelfPermission("android.permission.WRITE_EXTERNAL_STORAGE") == 0;
+            boolean b4 = context.checkCallingOrSelfPermission("android.permission.ACCESS_NETWORK_STATE") == 0;
+            boolean b5 = context.checkCallingOrSelfPermission("android.permission.ACCESS_WIFI_STATE") == 0;
 
-	public static String getMid(Context context) {
-		TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-		String imei = tm.getDeviceId();
+            if (!b1 || !b2 || !b3 || !b4 || !b5) {
+                Log.d(TAG, "没有添加权限");
+                Toast.makeText(context.getApplicationContext(), "没有添加权限", Toast.LENGTH_SHORT).show();
+            }
+            return b1 && b2 && b3 && b4 && b5;
+        }
+
+        return false;
+    }
+
+    public static String getCurrentTime() {
+        long currentTime = System.currentTimeMillis();
+        Date date = new Date(currentTime);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        String time = sdf.format(date);
+        return time;
+    }
+
+    public static String getVerName(Context c) {
+        PackageManager pm = c.getPackageManager();
+        PackageInfo pi = null;
+        try {
+            pi = pm.getPackageInfo(c.getPackageName(), PackageManager.GET_ACTIVITIES);
+        } catch (NameNotFoundException e) {
+            Log.e(TAG, "Error while collect package info", e);
+            e.printStackTrace();
+            return "error";
+        }
+        if (pi == null) {
+            return "error1";
+        }
+        String versionName = pi.versionName;
+        if (versionName == null) {
+            return "not set";
+        }
+        return versionName;
+    }
+
+    public static String getVerCode(Context c) {
+        PackageManager pm = c.getPackageManager();
+        PackageInfo pi = null;
+        try {
+            pi = pm.getPackageInfo(c.getPackageName(), PackageManager.GET_ACTIVITIES);
+        } catch (NameNotFoundException e) {
+            Log.e(TAG, "Error while collect package info", e);
+            e.printStackTrace();
+            return "error";
+        }
+        if (pi == null) {
+            return "error1";
+        }
+        int versionCode = pi.versionCode;
+
+        return String.valueOf(versionCode);
+    }
+
+    public static String getMid(Context context) {
+        TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+        String imei = tm.getDeviceId();
         String AndroidID = android.provider.Settings.System.getString(context.getContentResolver(), "android_id");
         String serialNo = getDeviceSerialForMid2();
         String m2 = getMD5Str("" + imei + AndroidID + serialNo);
         return m2;
     }
-	
-	private static String getDeviceSerialForMid2() {
+
+    private static String getDeviceSerialForMid2() {
         String serial = "";
         try {
             Class<?> c = Class.forName("android.os.SystemProperties");
@@ -161,8 +159,8 @@ public class LogCollectorUtility {
         }
         return serial;
     }
-	
-	public static String getMD5Str(String str) {
+
+    public static String getMD5Str(String str) {
         MessageDigest messageDigest = null;
         try {
             messageDigest = MessageDigest.getInstance("MD5");
@@ -183,7 +181,7 @@ public class LogCollectorUtility {
             else
                 md5StrBuff.append(Integer.toHexString(0xFF & byteArray[i]));
         }
-        
+
 
         return md5StrBuff.toString();
     }

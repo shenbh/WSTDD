@@ -2,14 +2,14 @@ package com.newland.wstdd.mine.beanrequest;
 
 public class MinePersonInfoGetReq {
 
-	private String userId;
+    private String userId;
 
-	public String getUserId() {
-		return userId;
-	}
+    public String getUserId() {
+        return userId;
+    }
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-	
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
 }

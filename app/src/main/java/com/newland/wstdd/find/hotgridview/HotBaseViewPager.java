@@ -9,31 +9,31 @@ import android.view.MotionEvent;
  * 自定义高度的viewpapger
  */
 public class HotBaseViewPager extends ViewPager {
-	private boolean scrollable = true;
+    private boolean scrollable = true;
 
-	public HotBaseViewPager(Context context) {
-		super(context);
-	}
+    public HotBaseViewPager(Context context) {
+        super(context);
+    }
 
-	public HotBaseViewPager(Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
+    public HotBaseViewPager(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
 
-	/**
-	 * 设置viewpager是否可以滚动
-	 * 
-	 * @param enable
-	 */
-	public void setScrollable(boolean enable) {
-		scrollable = enable;
-	}
+    /**
+     * 设置viewpager是否可以滚动
+     *
+     * @param enable
+     */
+    public void setScrollable(boolean enable) {
+        scrollable = enable;
+    }
 
-	@Override
-	public boolean onInterceptTouchEvent(MotionEvent event) {
-		if (scrollable) {
-			return super.onInterceptTouchEvent(event);
-		} else {
-			return false;
-		}
-	}
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent event) {
+        if (scrollable) {
+            return super.onInterceptTouchEvent(event);
+        } else {
+            return false;
+        }
+    }
 }

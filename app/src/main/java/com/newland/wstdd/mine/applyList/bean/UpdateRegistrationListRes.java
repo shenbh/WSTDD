@@ -1,18 +1,19 @@
 package com.newland.wstdd.mine.applyList.bean;
+
 /**
  * 报名活动人员列表更新
- * @author Administrator
  *
+ * @author Administrator
  */
 public class UpdateRegistrationListRes {
-	private String getResMess;
+    private String getResMess;
 
-	public String getGetResMess() {
-		return getResMess;
-	}
+    public String getGetResMess() {
+        return getResMess;
+    }
 
-	public void setGetResMess(String getResMess) {
-		this.getResMess = getResMess;
-	}
-	
+    public void setGetResMess(String getResMess) {
+        this.getResMess = getResMess;
+    }
+
 }

@@ -12,27 +12,28 @@ import com.newland.wstdd.login.regist.RegistFragment;
 import com.newland.wstdd.shortcut.ShortCutActivity;
 
 public class TestHandle extends Handler {
-	public static final int CANCEL_USER = 0;//注销用户
-	private ShortCutActivity context;
-	public TestHandle(ShortCutActivity context) {
-		this.context = context;
-	}
+    public static final int CANCEL_USER = 0;//注销用户
+    private ShortCutActivity context;
 
-	@SuppressWarnings("static-access")
-	public void handleMessage(Message msg) {
-		switch (msg.what) {
-		case CANCEL_USER:
-			// 只有当msg.obj对象为空，表示访问服务器成功
-			if (msg.obj != null) {
-				if (msg.obj instanceof String) {
-					context.OnFailResultListener((String)msg.obj);
-				} else if (msg.obj instanceof DeleteUserInfoRes) {
-					context.OnHandleResultListener(msg.obj, CANCEL_USER);
-				}
-			}
-			break;
-		}
-		super.handleMessage(msg);
-	}
+    public TestHandle(ShortCutActivity context) {
+        this.context = context;
+    }
+
+    @SuppressWarnings("static-access")
+    public void handleMessage(Message msg) {
+        switch (msg.what) {
+            case CANCEL_USER:
+                // 只有当msg.obj对象为空，表示访问服务器成功
+                if (msg.obj != null) {
+                    if (msg.obj instanceof String) {
+                        context.OnFailResultListener((String) msg.obj);
+                    } else if (msg.obj instanceof DeleteUserInfoRes) {
+                        context.OnHandleResultListener(msg.obj, CANCEL_USER);
+                    }
+                }
+                break;
+        }
+        super.handleMessage(msg);
+    }
 
 }

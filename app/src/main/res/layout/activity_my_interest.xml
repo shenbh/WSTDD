@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:background="@android:color/white"
     android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <include
         android:id="@+id/interest_top_rr"
@@ -20,7 +20,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="10dp"
         android:orientation="horizontal"
-        android:paddingTop="10dp" >
+        android:paddingTop="10dp">
 
         <TextView
             android:id="@+id/fragment_shop_submit"
@@ -45,7 +45,7 @@
         android:layout_marginBottom="25dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:gravity="center" >
+        android:gravity="center">
 
         <com.newland.wstdd.mine.myinterest.DragGridView
             android:id="@+id/fragment_shop_myGridView"
@@ -55,8 +55,7 @@
             android:gravity="center"
             android:listSelector="@android:color/transparent"
             android:numColumns="4"
-            android:scrollbars="none" >
-        </com.newland.wstdd.mine.myinterest.DragGridView>
+            android:scrollbars="none"></com.newland.wstdd.mine.myinterest.DragGridView>
     </LinearLayout>
 
     <LinearLayout
@@ -64,7 +63,7 @@
         style="@style/layout_mw_style"
         android:layout_alignParentBottom="true"
         android:background="@color/originate_red"
-        android:gravity="center" >
+        android:gravity="center">
 
         <Button
             android:id="@+id/add_bt"

@@ -8,95 +8,95 @@ import com.newland.wstdd.common.bean.TddAdvCfgVo;
 /**
  * 第三方绑定之后的返回信息
  * 成功   失败
- * @author Administrator
  *
+ * @author Administrator
  */
-public class ThirdLoginRes implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private String ifBind;//true 成功   false  失败
-	private String userId;
-	private String headImgUrl;
-	private String nickName;
-	private List<String> tags;
-	private String myAcNum;
-	private String mySignAcNum;
-	private String myFavAcNum;
-	private List<TddAdvCfgVo> homeAds;//首页轮播广告数组
-	public String getIfBind() {
-		return ifBind;
-	}
+public class ThirdLoginRes implements Serializable {
+    /**
+     *
+     */
+    private static final long serialVersionUID = 1L;
+    private String ifBind;//true 成功   false  失败
+    private String userId;
+    private String headImgUrl;
+    private String nickName;
+    private List<String> tags;
+    private String myAcNum;
+    private String mySignAcNum;
+    private String myFavAcNum;
+    private List<TddAdvCfgVo> homeAds;//首页轮播广告数组
 
-	public void setIfBind(String ifBind) {
-		this.ifBind = ifBind;
-	}
+    public String getIfBind() {
+        return ifBind;
+    }
 
-	public String getUserId() {
-		return userId;
-	}
+    public void setIfBind(String ifBind) {
+        this.ifBind = ifBind;
+    }
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
+    public String getUserId() {
+        return userId;
+    }
 
-	public String getHeadImgUrl() {
-		return headImgUrl;
-	}
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
-	public void setHeadImgUrl(String headImgUrl) {
-		this.headImgUrl = headImgUrl;
-	}
+    public String getHeadImgUrl() {
+        return headImgUrl;
+    }
 
-	public String getNickName() {
-		return nickName;
-	}
+    public void setHeadImgUrl(String headImgUrl) {
+        this.headImgUrl = headImgUrl;
+    }
 
-	public void setNickName(String nickName) {
-		this.nickName = nickName;
-	}
+    public String getNickName() {
+        return nickName;
+    }
 
-	public List<String> getTags() {
-		return tags;
-	}
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
+    }
 
-	public void setTags(List<String> tags) {
-		this.tags = tags;
-	}
+    public List<String> getTags() {
+        return tags;
+    }
 
-	public String getMyAcNum() {
-		return myAcNum;
-	}
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
 
-	public void setMyAcNum(String myAcNum) {
-		this.myAcNum = myAcNum;
-	}
+    public String getMyAcNum() {
+        return myAcNum;
+    }
 
-	public String getMySignAcNum() {
-		return mySignAcNum;
-	}
+    public void setMyAcNum(String myAcNum) {
+        this.myAcNum = myAcNum;
+    }
 
-	public void setMySignAcNum(String mySignAcNum) {
-		this.mySignAcNum = mySignAcNum;
-	}
+    public String getMySignAcNum() {
+        return mySignAcNum;
+    }
 
-	public String getMyFavAcNum() {
-		return myFavAcNum;
-	}
+    public void setMySignAcNum(String mySignAcNum) {
+        this.mySignAcNum = mySignAcNum;
+    }
 
-	public void setMyFavAcNum(String myFavAcNum) {
-		this.myFavAcNum = myFavAcNum;
-	}
+    public String getMyFavAcNum() {
+        return myFavAcNum;
+    }
 
-	public List<TddAdvCfgVo> getHomeAds() {
-		return homeAds;
-	}
+    public void setMyFavAcNum(String myFavAcNum) {
+        this.myFavAcNum = myFavAcNum;
+    }
 
-	public void setHomeAds(List<TddAdvCfgVo> homeAds) {
-		this.homeAds = homeAds;
-	}
+    public List<TddAdvCfgVo> getHomeAds() {
+        return homeAds;
+    }
 
-	
-	
+    public void setHomeAds(List<TddAdvCfgVo> homeAds) {
+        this.homeAds = homeAds;
+    }
+
+
 }

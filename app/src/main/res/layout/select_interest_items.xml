@@ -5,32 +5,34 @@
     android:layout_height="fill_parent"
     android:background="@android:color/white"
     android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <ScrollView
         style="@style/layout_mw_style"
         android:paddingBottom="30dip"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
-     
 
-            <LinearLayout
-                android:id="@+id/select_interest_items_ll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/select_interest_items_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
 
-                <TextView android:textSize="14sp"
-                    android:id="@+id/select_interest_items_type"
-                    style="@style/layout_mw_style"
-                    android:text="生活"
-                    android:padding="15dip"
-                    android:textColor="@color/grey_text" />
-				 <ScrollView
-            		style="@style/layout_mw_style"
-            		android:scrollbars="none" >
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/select_interest_items_type"
+                style="@style/layout_mw_style"
+                android:text="生活"
+                android:padding="15dip"
+                android:textColor="@color/grey_text" />
+
+            <ScrollView
+                style="@style/layout_mw_style"
+                android:scrollbars="none">
+
                 <com.newland.wstdd.mine.myinterest.selectinterest.SelectInterestGridView
                     android:id="@+id/select_interest_items_item"
                     android:layout_width="match_parent"
@@ -39,10 +41,9 @@
                     android:gravity="center"
                     android:listSelector="@android:color/transparent"
                     android:numColumns="4"
-                    android:scrollbars="none" >
-                </com.newland.wstdd.mine.myinterest.selectinterest.SelectInterestGridView>
-                </ScrollView>
-                
+                    android:scrollbars="none"></com.newland.wstdd.mine.myinterest.selectinterest.SelectInterestGridView>
+            </ScrollView>
+
         </LinearLayout>
     </ScrollView>
 

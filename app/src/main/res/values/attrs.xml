@@ -19,23 +19,22 @@
         <attr name="peng_drawableLeft" format="reference" />
     </declare-styleable>
 
-    
+
     <declare-styleable name="TimeTextView">
-        
+
     </declare-styleable>
-    
-    
 
-	<declare-styleable name="RoundAngleImageView">
-	<attr name="roundWidth" format="dimension" />
-	<attr name="roundHeight" format="dimension" />
-	</declare-styleable>
 
-	<!-- 圆形头像图片 -->
-	<declare-styleable name="roundedimageview">
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+    <!-- 圆形头像图片 -->
+    <declare-styleable name="roundedimageview">
         <attr name="border_thickness" format="dimension" />
         <attr name="border_inside_color" format="color" />
         <attr name="border_outside_color" format="color"></attr>
     </declare-styleable>
-	
+
 </resources>

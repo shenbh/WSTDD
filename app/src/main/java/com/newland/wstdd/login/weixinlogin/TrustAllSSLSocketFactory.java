@@ -26,102 +26,100 @@ import org.apache.http.conn.ssl.X509HostnameVerifier;
 import android.os.Build;
 
 /**
- * 
+ * @author xiong_it
  * @description ssl安全链接工厂 更多移动开发内容请关注： http://blog.csdn.net/xiong_it
  * @charset UTF-8
- * @author xiong_it
  * @date 2015-7-20下午4:43:25
- * @version
  */
-public class TrustAllSSLSocketFactory  extends SSLSocketFactory   {
-	
-	private javax.net.ssl.SSLSocketFactory factory;
-	  private static TrustAllSSLSocketFactory instance;
+public class TrustAllSSLSocketFactory extends SSLSocketFactory {
 
-	  private TrustAllSSLSocketFactory() throws KeyManagementException, UnrecoverableKeyException,
-	      NoSuchAlgorithmException, KeyStoreException {
-	    super(null);
+    private javax.net.ssl.SSLSocketFactory factory;
+    private static TrustAllSSLSocketFactory instance;
 
-	    SSLContext context = SSLContext.getInstance("TLS");
-	    context.init(null, new TrustManager[] { new TrustAllManager() }, null);
-	    factory = context.getSocketFactory();
-	    setHostnameVerifier(new X509HostnameVerifier() {
+    private TrustAllSSLSocketFactory() throws KeyManagementException, UnrecoverableKeyException,
+            NoSuchAlgorithmException, KeyStoreException {
+        super(null);
 
-	      @Override
-	      public void verify(String host, String[] cns, String[] subjectAlts) throws SSLException {
+        SSLContext context = SSLContext.getInstance("TLS");
+        context.init(null, new TrustManager[]{new TrustAllManager()}, null);
+        factory = context.getSocketFactory();
+        setHostnameVerifier(new X509HostnameVerifier() {
 
-	      }
+            @Override
+            public void verify(String host, String[] cns, String[] subjectAlts) throws SSLException {
 
-	      @Override
-	      public void verify(String host, X509Certificate cert) throws SSLException {
+            }
 
-	      }
+            @Override
+            public void verify(String host, X509Certificate cert) throws SSLException {
 
-	      @Override
-	      public void verify(String host, SSLSocket ssl) throws IOException {
+            }
 
-	      }
+            @Override
+            public void verify(String host, SSLSocket ssl) throws IOException {
 
-	      @Override
-	      public boolean verify(String host, SSLSession session) {
-	        return true;
-	      }
-	    });
-	  }
+            }
 
-	  public static SocketFactory getDefault() {
-	    if (instance == null) {
-	      try {
-	        instance = new TrustAllSSLSocketFactory();
-	      } catch (Exception e) {
-	        e.printStackTrace();
-	      }
-	    }
-	    return instance;
-	  }
+            @Override
+            public boolean verify(String host, SSLSession session) {
+                return true;
+            }
+        });
+    }
 
-	  @Override
-	  public Socket createSocket() throws IOException {
-	    return factory.createSocket();
-	  }
+    public static SocketFactory getDefault() {
+        if (instance == null) {
+            try {
+                instance = new TrustAllSSLSocketFactory();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return instance;
+    }
 
-	  @Override
-	  public Socket createSocket(Socket socket, String host, int port, boolean autoClose)
-	      throws IOException, UnknownHostException {
-	    if (Build.VERSION.SDK_INT < 11) { // 3.0
-	      injectHostname(socket, host);
-	    }
+    @Override
+    public Socket createSocket() throws IOException {
+        return factory.createSocket();
+    }
 
-	    return factory.createSocket(socket, host, port, autoClose);
-	  }
+    @Override
+    public Socket createSocket(Socket socket, String host, int port, boolean autoClose)
+            throws IOException, UnknownHostException {
+        if (Build.VERSION.SDK_INT < 11) { // 3.0
+            injectHostname(socket, host);
+        }
 
-	  private void injectHostname(Socket socket, String host) {
-	    try {
-	      Field field = InetAddress.class.getDeclaredField("hostName");
-	      field.setAccessible(true);
-	      field.set(socket.getInetAddress(), host);
-	    } catch (Exception ignored) {
-	    }
-	  }
+        return factory.createSocket(socket, host, port, autoClose);
+    }
 
-	  public class TrustAllManager implements X509TrustManager {
+    private void injectHostname(Socket socket, String host) {
+        try {
+            Field field = InetAddress.class.getDeclaredField("hostName");
+            field.setAccessible(true);
+            field.set(socket.getInetAddress(), host);
+        } catch (Exception ignored) {
+        }
+    }
 
-	    @Override
-	    public void checkClientTrusted(X509Certificate[] arg0, String arg1)
-	        throws CertificateException {
+    public class TrustAllManager implements X509TrustManager {
 
-	    }
+        @Override
+        public void checkClientTrusted(X509Certificate[] arg0, String arg1)
+                throws CertificateException {
 
-	    @Override
-	    public void checkServerTrusted(X509Certificate[] arg0, String arg1)
-	        throws CertificateException {
+        }
 
-	    }
+        @Override
+        public void checkServerTrusted(X509Certificate[] arg0, String arg1)
+                throws CertificateException {
 
-	    @Override
-	    public X509Certificate[] getAcceptedIssuers() {
-	      return null;
-	    }
-	  }
+        }
 
-	}
+        @Override
+        public X509Certificate[] getAcceptedIssuers() {
+            return null;
+        }
+    }
+
+}

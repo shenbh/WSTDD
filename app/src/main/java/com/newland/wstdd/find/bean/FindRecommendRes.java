@@ -7,22 +7,19 @@ import com.newland.wstdd.common.bean.TddActivity;
 
 /**
  * 推荐活动列表返回信息
- * @author Administrator
  *
+ * @author Administrator
  */
 public class FindRecommendRes {
-	private List<TddActivity> tjList;//对象列表
+    private List<TddActivity> tjList;//对象列表
 
-	public List<TddActivity> getTjList() {
-		return tjList;
-	}
+    public List<TddActivity> getTjList() {
+        return tjList;
+    }
 
-	public void setTjList(List<TddActivity> tjList) {
-		this.tjList = tjList;
-	}
+    public void setTjList(List<TddActivity> tjList) {
+        this.tjList = tjList;
+    }
 
-	
-	
-	
-	
+
 }

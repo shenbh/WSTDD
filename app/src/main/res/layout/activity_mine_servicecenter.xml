@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 服务中心 -->
 
@@ -13,18 +13,18 @@
     <ScrollView
         style="@style/layout_mm_style"
         android:background="@drawable/servicecenter_bg"
-        android:scrollbars="none" >
+        android:scrollbars="none">
 
         <LinearLayout
             style="@style/layout_mm_style"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.3"
                 android:background="@color/transparent"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <ImageView
                     android:id="@+id/service_headimg_iv"
@@ -33,7 +33,8 @@
                     android:layout_marginTop="60dp"
                     android:src="@drawable/tuantaitai" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/service_kefu_tv"
                     style="@style/layout_ww_style"
                     android:layout_gravity="center_horizontal"
@@ -41,7 +42,8 @@
                     android:text="客服 我是团太太"
                     android:textColor="@color/white" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/service_time_tv"
                     style="@style/layout_ww_style"
                     android:layout_gravity="center_horizontal"
@@ -55,7 +57,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.4"
                 android:background="@color/transparent"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <com.newland.wstdd.common.view.RoundAngleImageView
 
@@ -65,7 +67,8 @@
                     android:layout_marginTop="10dp"
                     android:src="@drawable/empty_photo" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/service_weixin_tv"
                     style="@style/layout_ww_style"
                     android:layout_gravity="center_horizontal"
@@ -73,12 +76,13 @@
                     android:text="微信号 woshituantaitai"
                     android:textColor="@color/white" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/service_weixintwocode_tv"
                     style="@style/layout_ww_style"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
-                      android:layout_marginBottom="5dp"
+                    android:layout_marginBottom="5dp"
                     android:text="微信扫描二维码"
                     android:textColor="@color/white" />
             </LinearLayout>
@@ -89,9 +93,10 @@
                 android:layout_weight="0.35"
                 android:background="@color/transparent"
                 android:orientation="vertical"
-                android:paddingBottom="30dp" >
+                android:paddingBottom="30dp">
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/service_qq_tv"
                     style="@style/layout_ww_style"
                     android:layout_alignLeft="@+id/service_tel_ptv"
@@ -128,7 +133,8 @@
                     android:textColor="@color/white"
                     peng:peng_drawableRight="@drawable/servicephone" />
 
-                <TextView android:textSize="14sp"
+                <TextView
+                    android:textSize="14sp"
                     android:id="@+id/service_email_tv"
                     style="@style/layout_ww_style"
                     android:layout_alignLeft="@+id/service_tel_ptv"

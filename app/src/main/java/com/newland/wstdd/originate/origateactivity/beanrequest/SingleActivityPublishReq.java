@@ -5,25 +5,28 @@ import com.newland.wstdd.mine.beanresponse.TddUserCertificate;
 
 /**
  * 单个活动发布的请求信息
- * @author Administrator
  *
+ * @author Administrator
  */
 public class SingleActivityPublishReq {
-	private TddActivity tddActivity;//活动对象
-	private TddUserCertificate tddUserCertificate;//个人信息对象
-	public TddActivity getTddActivity() {
-		return tddActivity;
-	}
-	public void setTddActivity(TddActivity tddActivity) {
-		this.tddActivity = tddActivity;
-	}
-	public TddUserCertificate getTddUserCertificate() {
-		return tddUserCertificate;
-	}
-	public void setTddUserCertificate(TddUserCertificate tddUserCertificate) {
-		this.tddUserCertificate = tddUserCertificate;
-	}
-	
-	
-	
+    private TddActivity tddActivity;//活动对象
+    private TddUserCertificate tddUserCertificate;//个人信息对象
+
+    public TddActivity getTddActivity() {
+        return tddActivity;
+    }
+
+    public void setTddActivity(TddActivity tddActivity) {
+        this.tddActivity = tddActivity;
+    }
+
+    public TddUserCertificate getTddUserCertificate() {
+        return tddUserCertificate;
+    }
+
+    public void setTddUserCertificate(TddUserCertificate tddUserCertificate) {
+        this.tddUserCertificate = tddUserCertificate;
+    }
+
+
 }

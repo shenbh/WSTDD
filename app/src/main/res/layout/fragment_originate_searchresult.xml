@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <!-- 发起/搜索 搜索结果界面 -->
 
@@ -17,13 +17,13 @@
     <!-- android:headerDividersEnabled="false" > -->
     <!-- </com.newland.wstdd.common.view.CustomListViews> -->
 
-	<LinearLayout
+    <LinearLayout
         android:id="@+id/listview_empty_iv"
         style="@style/layout_mm_style"
         android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical"
-        android:visibility="gone" >
+        android:visibility="gone">
 
         <ImageView
             style="@style/layout_ww_style"
@@ -36,11 +36,11 @@
             android:text="这里什么都没有"
             android:textColor="@color/textgray" />
     </LinearLayout>
+
     <ListView
         android:id="@+id/category_listview"
         style="@style/layout_mm_style"
         android:fadingEdge="none"
-        android:focusable="true" >
-    </ListView>
+        android:focusable="true"></ListView>
 
 </RelativeLayout>

@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         style="@style/layout_mw_style"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <LinearLayout
             android:id="@+id/activity_mine_personalcenter_nickname_ll"
@@ -18,7 +18,7 @@
             android:clickable="true"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingLeft="15dip" >
+            android:paddingLeft="15dip">
 
             <ImageView
                 android:id="@+id/listview_like_list_item_headicon"

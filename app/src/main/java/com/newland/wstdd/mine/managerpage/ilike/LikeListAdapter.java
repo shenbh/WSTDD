@@ -20,84 +20,79 @@ import com.newland.wstdd.common.updownloadimg.ImageDownLoad;
 
 /**
  * 发现-listview 动态生成的 子适配器
- * 
+ *
  * @author H81 2015-11-6
- * 
  */
 public class LikeListAdapter extends BaseAdapter {
-	private LayoutInflater mInflater;
-	private Context context;
-	List<TddLikeVo> tddLikeVos;
-	public LikeListAdapter(Context context,
-			List<TddLikeVo> tddLikeVos) {
-		this.context = context;
-		this.tddLikeVos = tddLikeVos;
-		mInflater = LayoutInflater.from(context);
-	}
+    private LayoutInflater mInflater;
+    private Context context;
+    List<TddLikeVo> tddLikeVos;
 
-	@Override
-	public int getCount() {
-		return tddLikeVos == null ? 0 : tddLikeVos.size();
-	}
+    public LikeListAdapter(Context context,
+                           List<TddLikeVo> tddLikeVos) {
+        this.context = context;
+        this.tddLikeVos = tddLikeVos;
+        mInflater = LayoutInflater.from(context);
+    }
 
-	@Override
-	public TddLikeVo getItem(int position) {
-		if (tddLikeVos.get(position) != null && tddLikeVos.size() != 0) {
-			return tddLikeVos.get(position);
-		}
-		return null;
-	}
+    @Override
+    public int getCount() {
+        return tddLikeVos == null ? 0 : tddLikeVos.size();
+    }
 
-	@Override
-	public long getItemId(int position) {
-		return position;
-	}
+    @Override
+    public TddLikeVo getItem(int position) {
+        if (tddLikeVos.get(position) != null && tddLikeVos.size() != 0) {
+            return tddLikeVos.get(position);
+        }
+        return null;
+    }
 
-	@Override
-	public View getView(final int position, View convertView, ViewGroup parent) {
-		final ViewHolder holder;
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 
-		if (convertView == null) {
-	
-			// 根据自定义的Item布局加载布局
-			convertView = mInflater.inflate(R.layout.listview_like_list_item,parent, false);
-			holder = new ViewHolder();
-			holder.headIconIv=(ImageView) convertView.findViewById(R.id.listview_like_list_item_headicon);
-			holder.nickNameTv=(TextView) convertView.findViewById(R.id.listview_like_list_item_nickname);
-			// 将设置好的布局保存到缓存中，并将其设置在Tag里，以便后面方便取出Tag
-			convertView.setTag(holder);
-			
-		} else {
-			holder = (ViewHolder) convertView.getTag();
-		}
-		
-		    TddLikeVo data = getItem(position);
-		    if(data!=null){
-			holder.nickNameTv.setText(data.getNickname());
-			ImageDownLoad.getDownLoadCircleImg(data.getHeadimgurl(), holder.headIconIv);
-		    }
+    @Override
+    public View getView(final int position, View convertView, ViewGroup parent) {
+        final ViewHolder holder;
 
-		   return convertView;
-	}
+        if (convertView == null) {
 
-	// ViewHolder静态类
-	 class ViewHolder {
-		 ImageView headIconIv;// 动态生成
-		 TextView nickNameTv;//标签
-	}
+            // 根据自定义的Item布局加载布局
+            convertView = mInflater.inflate(R.layout.listview_like_list_item, parent, false);
+            holder = new ViewHolder();
+            holder.headIconIv = (ImageView) convertView.findViewById(R.id.listview_like_list_item_headicon);
+            holder.nickNameTv = (TextView) convertView.findViewById(R.id.listview_like_list_item_nickname);
+            // 将设置好的布局保存到缓存中，并将其设置在Tag里，以便后面方便取出Tag
+            convertView.setTag(holder);
 
-	public List<TddLikeVo> getRegistrationData() {
-		return tddLikeVos;
-	}
+        } else {
+            holder = (ViewHolder) convertView.getTag();
+        }
 
-	public void setRegistrationData(List<TddLikeVo> tddLikeVos) {
-		this.tddLikeVos = tddLikeVos;
-	}
+        TddLikeVo data = getItem(position);
+        if (data != null) {
+            holder.nickNameTv.setText(data.getNickname());
+            ImageDownLoad.getDownLoadCircleImg(data.getHeadimgurl(), holder.headIconIv);
+        }
 
-	
-	 
+        return convertView;
+    }
+
+    // ViewHolder静态类
+    class ViewHolder {
+        ImageView headIconIv;// 动态生成
+        TextView nickNameTv;//标签
+    }
+
+    public List<TddLikeVo> getRegistrationData() {
+        return tddLikeVos;
+    }
+
+    public void setRegistrationData(List<TddLikeVo> tddLikeVos) {
+        this.tddLikeVos = tddLikeVos;
+    }
 
 
-	
-	
 }

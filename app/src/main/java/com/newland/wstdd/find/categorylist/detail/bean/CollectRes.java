@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.newland.wstdd.find.categorylist.detail.bean;
 
@@ -8,14 +8,14 @@ package com.newland.wstdd.find.categorylist.detail.bean;
  *
  */
 public class CollectRes {
-	private String back;//	0 收藏成功 1收藏取消
+    private String back;//	0 收藏成功 1收藏取消
 
-	public String getBack() {
-		return back;
-	}
+    public String getBack() {
+        return back;
+    }
 
-	public void setBack(String back) {
-		this.back = back;
-	}
-	
+    public void setBack(String back) {
+        this.back = back;
+    }
+
 }

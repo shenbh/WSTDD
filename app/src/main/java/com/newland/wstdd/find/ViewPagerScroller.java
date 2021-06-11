@@ -32,7 +32,6 @@ public class ViewPagerScroller extends Scroller {
     }
 
 
-
     @Override
 
     public void startScroll(int startX, int startY, int dx, int dy, int duration) {
